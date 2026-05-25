@@ -1024,17 +1024,17 @@ button {
 }
 
 .workbook-hero {
-  min-height: 200px;
+  min-height: 266px;
 }
 
 .workbook-hero h1 {
-  font-size: 37px;
+  font-size: 47px;
 }
 
 .workbook-hero p {
-  margin-top: 22px;
+  margin-top: 28px;
   color: #333;
-  font-size: 18px;
+  font-size: 23px;
 }
 
 .workbook-content {
@@ -1044,9 +1044,9 @@ button {
 }
 
 .workbook-content > h2 {
-  margin: 0 0 30px;
+  margin: 0 0 42px;
   color: #242424;
-  font-size: 18px;
+  font-size: 25px;
   font-weight: 900;
 }
 
@@ -1055,11 +1055,11 @@ button {
 }
 
 .workbook-filter .filter-label {
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .workbook-filter .filter-options {
-  gap: 11px 18px;
+  gap: 14px 24px;
   padding: 10px 30px;
 }
 
@@ -1069,9 +1069,9 @@ button {
 
 .workbook-filter .filter-chip {
   min-width: auto;
-  height: 25px;
-  padding: 0 16px;
-  font-size: 11px;
+  height: 34px;
+  padding: 0 21px;
+  font-size: 14px;
 }
 
 .publisher-row {
@@ -1095,30 +1095,30 @@ button {
 
 .selected-tags span {
   display: inline-grid;
-  height: 25px;
-  padding: 0 16px;
+  height: 32px;
+  padding: 0 19px;
   place-items: center;
   background: #f7f7f7;
   border: 1px solid #dfdfdf;
   border-radius: 999px;
   color: #7a7a7a;
-  font-size: 11px;
-  font-weight: 600;
+  font-size: 13px;
+  font-weight: 700;
 }
 
 .workbook-filter .exam-search {
   width: min(640px, 100%);
-  height: 31px;
+  height: 40px;
 }
 
 .workbook-filter .exam-search input {
-  font-size: 11px;
+  font-size: 14px;
 }
 
 .workbook-filter .search-submit {
-  width: 52px;
-  height: 31px;
-  font-size: 12px;
+  width: 68px;
+  height: 40px;
+  font-size: 14px;
 }
 
 .workbook-actions {
@@ -1126,7 +1126,7 @@ button {
 }
 
 .workbook-actions button {
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .book-meta {
@@ -1141,8 +1141,8 @@ button {
 .book-meta p {
   margin: 0;
   color: #555;
-  font-size: 11px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .book-meta strong {
@@ -1159,7 +1159,7 @@ button {
 .book-meta span {
   background: transparent;
   color: #999;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 600;
 }
 
@@ -1176,16 +1176,16 @@ button {
 
 .book-item {
   display: grid;
-  grid-template-columns: 118px minmax(0, 1fr);
-  gap: 28px;
-  min-height: 190px;
-  padding: 31px 0 28px;
+  grid-template-columns: 140px minmax(0, 1fr);
+  gap: 32px;
+  min-height: 226px;
+  padding: 38px 0 34px;
   border-bottom: 1px solid #e8e8e8;
 }
 
 .book-item img {
-  width: 118px;
-  height: 158px;
+  width: 140px;
+  height: 188px;
   object-fit: cover;
   background: #f7f7f7;
 }
@@ -1195,46 +1195,46 @@ button {
 }
 
 .book-copy h3 {
-  min-height: 48px;
+  min-height: 58px;
   margin: 0;
   color: #1f1f1f;
-  font-size: 22px;
+  font-size: 28px;
   font-weight: 900;
   line-height: 1.22;
 }
 
 .book-copy p {
-  margin: 8px 0 30px;
+  margin: 12px 0 36px;
   color: #8f8f8f;
-  font-size: 12px;
-  font-weight: 500;
+  font-size: 15px;
+  font-weight: 600;
 }
 
 .book-buttons {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 10px;
 }
 
 .book-buttons a,
 .book-buttons button {
   display: grid;
-  height: 34px;
+  height: 42px;
   place-items: center;
   border-radius: 999px;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 800;
   transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
 }
 
 .book-buttons a {
-  min-width: 102px;
+  min-width: 126px;
   background: #213f73;
   color: #fff;
 }
 
 .book-buttons button {
-  min-width: 102px;
+  min-width: 126px;
   background: #fff;
   border: 1px solid #ccd5df;
   color: #9aa7b5;
@@ -1253,14 +1253,14 @@ button {
 .more-books {
   display: grid;
   width: 100%;
-  height: 32px;
+  height: 42px;
   margin-top: 23px;
   place-items: center;
   background: #fff;
   border: 1px solid #e2e2e2;
   border-radius: 5px;
   color: #9b9b9b;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 700;
 }
 
@@ -1844,9 +1844,9 @@ button {
 
 .exam-hero {
   display: grid;
-  min-height: 200px;
+  min-height: 266px;
   place-items: center;
-  padding: 36px 24px 42px;
+  padding: 42px 24px 46px;
   background: linear-gradient(110deg, #a7edf5 0%, #d5cef8 100%);
   text-align: center;
 }
@@ -1854,7 +1854,7 @@ button {
 .exam-hero h1 {
   margin: 0;
   color: #050608;
-  font-size: 43px;
+  font-size: 47px;
   font-weight: 900;
   line-height: 1.25;
 }
@@ -1862,7 +1862,7 @@ button {
 .exam-hero p {
   margin: 28px 0 0;
   color: #202020;
-  font-size: 20px;
+  font-size: 23px;
   font-weight: 500;
 }
 
@@ -1887,8 +1887,8 @@ button {
 
 .filter-row {
   display: grid;
-  grid-template-columns: 126px 1fr;
-  min-height: 60px;
+  grid-template-columns: 160px 1fr;
+  min-height: 72px;
   border-bottom: 1px solid #e2e2e2;
 }
 
@@ -1901,8 +1901,8 @@ button {
   place-items: center;
   background: #eaf3ff;
   color: #284877;
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .filter-options {
@@ -1923,26 +1923,26 @@ button {
   align-items: center;
   gap: 8px;
   color: #555;
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .radio-options input {
-  width: 16px;
-  height: 16px;
+  width: 19px;
+  height: 19px;
   accent-color: #2b83ef;
 }
 
 .filter-chip {
   min-width: 58px;
-  height: 32px;
-  padding: 0 17px;
+  height: 36px;
+  padding: 0 22px;
   background: #fff;
   border: 1px solid #dddddd;
   border-radius: 999px;
   color: #555;
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 700;
   transition: background 160ms ease, color 160ms ease, border-color 160ms ease, transform 160ms ease;
 }
 
@@ -1963,7 +1963,7 @@ button {
 }
 
 .search-row {
-  min-height: 78px;
+  min-height: 88px;
 }
 
 .search-options {
@@ -1973,8 +1973,8 @@ button {
 .exam-search {
   display: flex;
   align-items: center;
-  width: 386px;
-  height: 36px;
+  width: 520px;
+  height: 42px;
   padding: 0 13px;
   border: 1px solid #d2d2d2;
   border-radius: 5px;
@@ -2006,16 +2006,16 @@ button {
   border: 0;
   outline: 0;
   color: #555;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .search-submit {
-  width: 61px;
-  height: 37px;
+  width: 74px;
+  height: 42px;
   background: #2b83ef;
   border-radius: 5px;
   color: #fff;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   transition: background 160ms ease, transform 160ms ease;
 }
@@ -2034,8 +2034,8 @@ button {
 .filter-actions button {
   background: transparent;
   color: #333;
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .exam-results {
@@ -2045,7 +2045,7 @@ button {
 .exam-results > h2 {
   margin: 0 0 24px;
   color: #252525;
-  font-size: 27px;
+  font-size: 32px;
   font-weight: 900;
 }
 
@@ -2064,7 +2064,7 @@ button {
 .exam-result-group h3 {
   margin: 0 0 24px;
   color: #2b2b2b;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 900;
 }
 
@@ -2077,10 +2077,10 @@ button {
 
 .download-card {
   display: grid;
-  grid-template-columns: 42px 1fr auto;
+  grid-template-columns: 54px 1fr auto;
   align-items: center;
-  min-height: 64px;
-  padding: 11px 14px;
+  min-height: 82px;
+  padding: 16px 18px;
   background: #fff;
   border: 1px solid #dedede;
   border-radius: 7px;
@@ -2088,12 +2088,12 @@ button {
 
 .download-icon {
   display: grid;
-  width: 30px;
-  height: 30px;
+  width: 39px;
+  height: 39px;
   place-items: center;
   border-radius: 5px;
   color: #fff;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .download-card.blue .download-icon {
@@ -2107,7 +2107,7 @@ button {
 .download-card strong {
   display: block;
   color: #222;
-  font-size: 13px;
+  font-size: 17px;
   font-weight: 900;
 }
 
@@ -2115,17 +2115,17 @@ button {
   display: block;
   margin-top: 3px;
   color: #222;
-  font-size: 11px;
+  font-size: 14px;
 }
 
 .download-card button {
-  height: 34px;
-  padding: 0 16px;
+  height: 42px;
+  padding: 0 22px;
   background: #fff;
   border: 1px solid #d9d9d9;
   border-radius: 4px;
   color: #222;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 800;
   transition: background 160ms ease, border-color 160ms ease, transform 160ms ease;
 }
@@ -2143,7 +2143,7 @@ button {
 .score-panel,
 .wrong-panel {
   overflow: hidden;
-  min-height: 219px;
+  min-height: 282px;
   background: #fff;
   border: 1px solid #d3d3d3;
   border-radius: 7px;
@@ -2151,10 +2151,10 @@ button {
 
 .score-panel h4,
 .wrong-panel h4 {
-  height: 32px;
+  height: 44px;
   margin: 0;
-  padding: 8px 18px;
-  font-size: 13px;
+  padding: 12px 22px;
+  font-size: 17px;
   font-weight: 900;
 }
 
@@ -2170,21 +2170,21 @@ button {
 
 .score-panel table {
   width: calc(100% - 30px);
-  margin: 13px 15px;
+  margin: 18px 15px;
   border-collapse: collapse;
   text-align: center;
   color: #333;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .score-panel th {
-  padding: 0 0 8px;
+  padding: 0 0 10px;
   border-bottom: 1px solid #333;
   font-weight: 500;
 }
 
 .score-panel td {
-  padding: 6px 0;
+  padding: 8px 0;
   border-bottom: 1px solid #ececec;
   font-weight: 500;
 }
@@ -2200,19 +2200,19 @@ button {
 
 .wrong-panel ol {
   display: grid;
-  gap: 13px;
-  margin: 20px 21px 0;
+  gap: 18px;
+  margin: 25px 24px 0;
   padding: 0;
   list-style: none;
 }
 
 .wrong-panel li {
   display: grid;
-  grid-template-columns: 44px 1fr 47px;
+  grid-template-columns: 58px 1fr 58px;
   align-items: center;
   gap: 8px;
   color: #333;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 800;
 }
 
