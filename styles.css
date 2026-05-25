@@ -2258,3 +2258,398 @@ button {
     width: 100%;
   }
 }
+
+/* Global country page */
+.global-page {
+  background: #fff;
+}
+
+.global-hero {
+  display: grid;
+  min-height: 184px;
+  place-items: center;
+  padding: 38px 24px 42px;
+  background: linear-gradient(112deg, #27bdd6 0%, #2a426f 100%);
+  color: #fff;
+  text-align: center;
+}
+
+.global-hero h1 {
+  margin: 0;
+  color: #fff;
+  font-size: 38px;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 1.15;
+}
+
+.global-hero p {
+  margin: 24px 0 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.global-content {
+  width: min(768px, calc(100% - 56px));
+  margin: 55px auto 102px;
+}
+
+.practice-section h2,
+.testbook-section h2,
+.guide-section h2 {
+  margin: 0 0 32px;
+  color: #2b2b2b;
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.practice-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px 24px;
+}
+
+.practice-card {
+  display: flex;
+  height: 150px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 16px;
+  background: #fff;
+  border: 1px solid #b5b5b5;
+  border-radius: 4px;
+  color: #1f1f1f;
+  text-align: center;
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.practice-card:hover {
+  border-color: #36aede;
+  box-shadow: 0 14px 28px rgba(38, 83, 129, 0.12);
+  transform: translateY(-3px);
+}
+
+.resource-logo {
+  display: grid;
+  min-height: 52px;
+  place-items: center;
+  margin-bottom: 17px;
+  color: #132235;
+  font-weight: 700;
+}
+
+.practice-card p {
+  margin: 0;
+  color: #202020;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.18;
+}
+
+.sat-resource {
+  position: relative;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.sat-resource span {
+  position: absolute;
+  right: -20px;
+  top: -3px;
+  display: grid;
+  width: 31px;
+  height: 31px;
+  place-items: center;
+  border-radius: 50%;
+  background: #22a6d8;
+  color: #fff;
+  font-family: "Pretendard", sans-serif;
+  font-size: 7px;
+  font-weight: 800;
+  line-height: 0.9;
+  text-align: center;
+}
+
+.psat-resource {
+  min-height: 32px;
+  padding: 5px 10px;
+  background: #0a9dd1;
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.ap-resource {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 49px;
+  font-weight: 700;
+  letter-spacing: -2px;
+}
+
+.ap-resource span {
+  color: #21a6d4;
+}
+
+.ap-resource em {
+  color: #88bd43;
+  font-style: normal;
+}
+
+.maa-resource {
+  color: #114475;
+  font-size: 25px;
+  font-weight: 900;
+  line-height: 0.82;
+  text-align: left;
+}
+
+.maa-resource span {
+  display: inline-block;
+  margin-left: 43px;
+  font-size: 20px;
+}
+
+.testbook-section {
+  margin-top: 96px;
+}
+
+.testbook-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 24px;
+}
+
+.testbook-tabs {
+  display: grid;
+  align-content: start;
+  gap: 22px;
+}
+
+.testbook-tabs button {
+  display: flex;
+  height: 42px;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 20px;
+  background: #fff;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  color: #333;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: left;
+  transition: background 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+.testbook-tabs button.active {
+  justify-content: space-between;
+  background: #1ba2d1;
+  border-color: #1ba2d1;
+  color: #fff;
+  font-weight: 800;
+  box-shadow: 0 10px 20px rgba(27, 162, 209, 0.18);
+}
+
+.testbook-tabs button:hover {
+  border-color: #1ba2d1;
+  color: #178eb8;
+  transform: translateY(-2px);
+}
+
+.testbook-tabs button.active:hover {
+  color: #fff;
+}
+
+.testbook-tabs button span {
+  font-size: 28px;
+  line-height: 0;
+}
+
+.chapter-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px 24px;
+}
+
+.chapter-card {
+  position: relative;
+  min-height: 110px;
+  padding: 15px 16px 16px;
+  background: #fff;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  color: #2a2a2a;
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease, background 180ms ease;
+}
+
+.chapter-card.active,
+.chapter-card:hover {
+  background: #f1f7ff;
+  border-color: #d9e4f4;
+  box-shadow: 0 8px 18px rgba(29, 62, 105, 0.09);
+  transform: translateY(-2px);
+}
+
+.chapter-card span {
+  display: inline-grid;
+  min-width: 23px;
+  height: 22px;
+  place-items: center;
+  padding: 0 6px;
+  background: #2ab9e4;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.chapter-card small {
+  position: absolute;
+  top: 18px;
+  right: 16px;
+  color: #a7a7a7;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.chapter-card h3 {
+  margin: 14px 0 10px;
+  color: #2d2d2d;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.chapter-card p {
+  margin: 0;
+  color: #777;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.26;
+}
+
+.guide-section {
+  margin-top: 93px;
+}
+
+.guide-section h2 {
+  margin-bottom: 34px;
+}
+
+.guide-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  padding: 31px 16px 0;
+}
+
+.guide-card {
+  position: relative;
+  overflow: visible;
+  background: #fff;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  transition: box-shadow 180ms ease, transform 180ms ease, border-color 180ms ease;
+}
+
+.guide-card:hover {
+  border-color: #b8d2f2;
+  box-shadow: 0 16px 30px rgba(35, 65, 110, 0.12);
+  transform: translateY(-3px);
+}
+
+.guide-tag {
+  position: absolute;
+  top: -31px;
+  left: 0;
+  display: inline-flex;
+  height: 24px;
+  align-items: center;
+  padding: 0 15px;
+  background: #eeeeee;
+  border-radius: 4px;
+  color: #333;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.guide-card img {
+  display: block;
+  width: 100%;
+  height: 216px;
+  border-radius: 5px 5px 0 0;
+  object-fit: cover;
+}
+
+.guide-card div {
+  padding: 17px 18px 19px;
+}
+
+.guide-card h3 {
+  margin: 0 0 13px;
+  color: #2a2a2a;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1.12;
+}
+
+.guide-card p {
+  margin: 0;
+  color: #303030;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.28;
+}
+
+.guide-dots {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 24px;
+}
+
+.guide-dots span {
+  width: 8px;
+  height: 8px;
+  background: #d1d1d1;
+  border-radius: 50%;
+}
+
+.guide-dots span:first-child {
+  background: #b7b7b7;
+}
+
+@media (max-width: 860px) {
+  .practice-grid,
+  .chapter-grid,
+  .guide-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testbook-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .testbook-tabs {
+    gap: 10px;
+  }
+
+  .guide-card {
+    overflow: hidden;
+  }
+
+  .guide-tag {
+    position: static;
+    margin: 12px 0 8px 12px;
+  }
+}
