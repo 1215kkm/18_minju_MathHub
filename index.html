@@ -12,20 +12,21 @@
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
     />
     <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
   </head>
   <body>
     <header class="site-header">
       <a class="logo" href="#" aria-label="MathHub home">Math<span>Hub</span></a>
       <nav class="nav" aria-label="Main navigation">
-        <a href="#">개념 완성</a>
-        <a href="#">기출 문제</a>
-        <a href="#">문제집 &amp; 해설</a>
-        <a href="#">국가별 과정</a>
+        <a href="#curriculum">개념 완성</a>
+        <a href="#features">기출 문제</a>
+        <a href="#features">문제집 &amp; 해설</a>
+        <a href="#curriculum">국가별 과정</a>
       </nav>
     </header>
 
     <main>
-      <section class="hero">
+      <section class="hero" id="top">
         <div class="hero-shape hero-ring-one"></div>
         <div class="hero-shape hero-dot-one"></div>
         <div class="hero-shape hero-dot-two"></div>
@@ -36,30 +37,31 @@
         <div class="hero-content">
           <h1>세계 수학 기출문제<br />라이브러리</h1>
           <p>다양한 기출문제와 교재를 빠르게 검색하고 다운로드하세요</p>
-          <form class="search-box" aria-label="Search resources">
+          <form class="search-box" aria-label="Search resources" data-search-form>
             <input type="search" placeholder="# AP Calculus 기출문제" />
             <button type="submit" aria-label="검색">
               <span></span>
             </button>
           </form>
+          <div class="search-feedback" data-search-feedback aria-live="polite"></div>
           <div class="exam-logos" aria-label="Featured exams">
-            <div class="exam-logo small">ThinkWave</div>
-            <div class="exam-logo sat">SAT</div>
-            <div class="exam-logo ap">AP</div>
-            <div class="exam-logo psat">PSAT<br />NMSQT</div>
-            <div class="exam-logo maa">MAA<br />AMC</div>
+            <button class="exam-logo small" type="button">ThinkWave</button>
+            <button class="exam-logo sat" type="button">SAT</button>
+            <button class="exam-logo ap" type="button">AP</button>
+            <button class="exam-logo psat" type="button">PSAT<br />NMSQT</button>
+            <button class="exam-logo maa" type="button">MAA<br />AMC</button>
           </div>
         </div>
       </section>
 
-      <section class="curriculum-section">
+      <section class="curriculum-section" id="curriculum">
         <div class="section-heading">
           <h2>원하는 수학 커리큘럼을<br />선택하세요!</h2>
           <p>국가 및 시험별로 정리된 기출문제와 교재를 확인할 수 있습니다</p>
         </div>
 
         <div class="curriculum-grid">
-          <article class="curriculum-card">
+          <article class="curriculum-card" tabindex="0">
             <div class="card-title"><span>🇺🇸</span> USA <a href="#" aria-label="USA 바로가기">↗</a></div>
             <div class="resource-box">
               <strong>Past Papers &amp; Exams</strong>
@@ -77,7 +79,7 @@
             </div>
           </article>
 
-          <article class="curriculum-card">
+          <article class="curriculum-card" tabindex="0">
             <div class="card-title"><span>🇬🇧</span> United Kingdom <a href="#" aria-label="United Kingdom 바로가기">↗</a></div>
             <div class="resource-box">
               <strong>Past Papers &amp; Exams</strong>
@@ -94,7 +96,7 @@
             </div>
           </article>
 
-          <article class="curriculum-card">
+          <article class="curriculum-card" tabindex="0">
             <div class="card-title"><span>🇨🇦</span> Canada <a href="#" aria-label="Canada 바로가기">↗</a></div>
             <div class="resource-box">
               <strong>Past Papers &amp; Exams</strong>
@@ -111,7 +113,7 @@
             </div>
           </article>
 
-          <article class="curriculum-card">
+          <article class="curriculum-card" tabindex="0">
             <div class="card-title"><span>🌎</span> IB Mathematics <a href="#" aria-label="IB Mathematics 바로가기">↗</a></div>
             <div class="resource-box">
               <strong>Past Papers &amp; Exams</strong>
@@ -130,7 +132,7 @@
         </div>
       </section>
 
-      <section class="features-section">
+      <section class="features-section" id="features">
         <div class="feature-symbol symbol-left">＋</div>
         <div class="feature-symbol symbol-right">％</div>
         <div class="section-heading feature-heading">
@@ -149,7 +151,7 @@
                 <li>주제 중심 학습</li>
               </ul>
             </div>
-            <img src="./assets/images/image-448.png" alt="문제집과 해설 목록 화면" />
+            <img src="./assets/images/workbook-list-panel.png" alt="문제집과 해설 목록 화면" />
           </article>
 
           <article class="feature-row">
@@ -162,7 +164,7 @@
                 <li>시험별 정리</li>
               </ul>
             </div>
-            <img src="./assets/images/image-447.png" alt="기출 문제 분석 화면" />
+            <img src="./assets/images/exam-analysis-panel.png" alt="기출 문제 분석 화면" />
           </article>
 
           <article class="feature-row">
@@ -175,42 +177,54 @@
                 <li>AMC / UKMT / CEMC</li>
               </ul>
             </div>
-            <img src="./assets/images/image-449.png" alt="시험 대비 자료 화면" />
+            <img src="./assets/images/practice-resources-panel.png" alt="시험 대비 자료 화면" />
           </article>
         </div>
       </section>
 
-      <section class="reviews-section">
+      <section class="reviews-section" id="reviews">
         <div class="section-heading">
           <span>작은 공부방부터 여러 학생이 있는 학교까지</span>
           <h2>모두 Math<span>Hub</span>를 찾는 이유</h2>
         </div>
-        <div class="review-track">
-          <article class="review-card">
-            <img src="./assets/images/quote-mark.png" alt="" />
-            <p>기출문제가 정리되어 있으니까 시험 대비가 훨씬 수월해졌어요.</p>
-            <div><img src="./assets/images/person-01.png" alt="" /><span>OO고등학교<br />김민정 학생</span></div>
-          </article>
-          <article class="review-card">
-            <img src="./assets/images/quote-mark.png" alt="" />
-            <p>해외 수학 자료를 한 번에 찾을 수 있어서 수업 준비 시간이 줄었어요.</p>
-            <div><img src="./assets/images/person-02.png" alt="" /><span>OO국제학교<br />최준혁 선생님</span></div>
-          </article>
-          <article class="review-card">
-            <img src="./assets/images/quote-mark.png" alt="" />
-            <p>개념 학습에서 풀이까지 이어지는 흐름이 좋아요.</p>
-            <div><img src="./assets/images/person-03.png" alt="" /><span>OO학원<br />박소연 원장</span></div>
-          </article>
-          <article class="review-card">
-            <img src="./assets/images/quote-mark.png" alt="" />
-            <p>검색해서 원하는 자료를 바로 내려받을 수 있어 편합니다.</p>
-            <div><img src="./assets/images/person-04.png" alt="" /><span>OO중학교<br />이서준 학생</span></div>
-          </article>
-          <article class="review-card">
-            <img src="./assets/images/quote-mark.png" alt="" />
-            <p>월별 문제와 해설이 함께 있어 복습 계획을 세우기 좋아요.</p>
-            <div><img src="./assets/images/person-06.png" alt="" /><span>OO고등학교<br />정다은 학생</span></div>
-          </article>
+        <div class="slider" data-slider>
+          <button class="slider-button prev" type="button" data-slider-prev aria-label="이전 후기">‹</button>
+          <div class="review-window">
+            <div class="review-track" data-slider-track>
+              <article class="review-card">
+                <img src="./assets/images/quote-mark.png" alt="" />
+                <p>기출문제가 정리되어 있으니까 시험 대비가 훨씬 수월해졌어요. 문제 유형별 복습도 빨라졌습니다.</p>
+                <div><img src="./assets/images/person-01.png" alt="" /><span>OO고등학교<br />김민정 학생</span></div>
+              </article>
+              <article class="review-card">
+                <img src="./assets/images/quote-mark.png" alt="" />
+                <p>해외 수학 자료를 한 번에 찾을 수 있어서 수업 준비 시간이 줄었어요.</p>
+                <div><img src="./assets/images/person-02.png" alt="" /><span>OO국제학교<br />최준혁 선생님</span></div>
+              </article>
+              <article class="review-card">
+                <img src="./assets/images/quote-mark.png" alt="" />
+                <p>개념 학습에서 풀이까지 이어지는 흐름이 좋아요. 학생들이 스스로 복습하기 좋습니다.</p>
+                <div><img src="./assets/images/person-03.png" alt="" /><span>OO학원<br />박소연 원장</span></div>
+              </article>
+              <article class="review-card">
+                <img src="./assets/images/quote-mark.png" alt="" />
+                <p>검색해서 원하는 자료를 바로 내려받을 수 있어 편합니다.</p>
+                <div><img src="./assets/images/person-04.png" alt="" /><span>OO중학교<br />이서준 학생</span></div>
+              </article>
+              <article class="review-card">
+                <img src="./assets/images/quote-mark.png" alt="" />
+                <p>월별 문제와 해설이 함께 있어 복습 계획을 세우기 좋아요.</p>
+                <div><img src="./assets/images/person-06.png" alt="" /><span>OO고등학교<br />정다은 학생</span></div>
+              </article>
+              <article class="review-card">
+                <img src="./assets/images/quote-mark.png" alt="" />
+                <p>국가별 과정이 분리되어 있어서 유학 준비 자료를 찾기가 쉬웠어요.</p>
+                <div><img src="./assets/images/person-07.png" alt="" /><span>국제반<br />오민재 학생</span></div>
+              </article>
+            </div>
+          </div>
+          <button class="slider-button next" type="button" data-slider-next aria-label="다음 후기">›</button>
+          <div class="slider-dots" data-slider-dots aria-label="후기 슬라이드 페이지"></div>
         </div>
       </section>
     </main>
