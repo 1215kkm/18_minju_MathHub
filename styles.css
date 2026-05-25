@@ -1023,10 +1023,6 @@ button {
   height: 132px;
 }
 
-.compact-header {
-  height: 58px;
-}
-
 .concept-page {
   background: #fff;
 }
@@ -1040,11 +1036,6 @@ button {
   text-align: center;
 }
 
-.concept-hero.compact {
-  min-height: 114px;
-  padding: 28px 24px 30px;
-}
-
 .concept-hero h1 {
   margin: 0;
   color: #050608;
@@ -1054,20 +1045,11 @@ button {
   letter-spacing: 0;
 }
 
-.concept-hero.compact h1 {
-  font-size: 29px;
-}
-
 .concept-hero p {
   margin: 28px 0 0;
   color: #111827;
   font-size: 23px;
   font-weight: 500;
-}
-
-.concept-hero.compact p {
-  margin-top: 16px;
-  font-size: 16px;
 }
 
 .concept-layout {
@@ -1080,11 +1062,11 @@ button {
 }
 
 .detail-layout {
-  grid-template-columns: 180px minmax(0, 680px);
-  gap: 64px;
-  width: min(980px, calc(100% - 64px));
-  margin-top: 70px;
-  padding-bottom: 110px;
+  grid-template-columns: 210px minmax(0, 835px);
+  gap: 70px;
+  width: min(1110px, calc(100% - 64px));
+  margin-top: 80px;
+  padding-bottom: 150px;
 }
 
 .concept-sidebar {
@@ -1125,8 +1107,8 @@ button {
 }
 
 .detail-panel {
-  min-height: 232px;
-  padding: 16px 0;
+  min-height: 426px;
+  padding: 24px 0 18px;
 }
 
 .side-group button {
@@ -1143,8 +1125,8 @@ button {
 }
 
 .detail-panel .side-group button {
-  padding: 0 12px 10px;
-  font-size: 12px;
+  padding: 0 18px 14px;
+  font-size: 18px;
 }
 
 .side-group button span {
@@ -1170,8 +1152,8 @@ button {
 }
 
 .side-group ol {
-  gap: 8px;
-  padding: 7px 0 6px;
+  gap: 13px;
+  padding: 11px 0 6px;
 }
 
 .side-group li {
@@ -1181,9 +1163,9 @@ button {
 }
 
 .side-group ol li {
-  padding: 0 14px;
+  padding: 0 18px;
   color: #7b7b7b;
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.55;
 }
 
@@ -1193,7 +1175,7 @@ button {
 }
 
 .side-group ol li a {
-  padding: 0 0 0 10px;
+  padding: 2px 0 2px 14px;
 }
 
 .side-group li.active {
@@ -1213,7 +1195,7 @@ button {
 
 .detail-panel .side-group.collapsed {
   margin-top: 0;
-  padding: 9px 12px;
+  padding: 12px 18px;
 }
 
 .concept-content {
@@ -1231,9 +1213,9 @@ button {
 }
 
 .detail-page .breadcrumb {
-  margin-bottom: 28px;
-  font-size: 12px;
-  gap: 17px;
+  margin-bottom: 38px;
+  font-size: 20px;
+  gap: 22px;
 }
 
 .breadcrumb strong {
@@ -1433,34 +1415,34 @@ button {
 }
 
 .lesson-title h2 {
-  font-size: 17px;
+  font-size: 28px;
 }
 
 .lesson-title p {
-  font-size: 12px;
+  font-size: 17px;
 }
 
 .concept-article-section {
-  padding: 29px 0 37px;
+  padding: 48px 0 58px;
 }
 
 .concept-article-section h3 {
-  margin: 0 0 8px;
+  margin: 0 0 10px;
   color: #2a2a2a;
-  font-size: 17px;
+  font-size: 24px;
   font-weight: 900;
 }
 
 .concept-article-section .lead {
-  margin: 0 0 12px;
+  margin: 0 0 18px;
   color: #9a9a9a;
-  font-size: 11px;
+  font-size: 15px;
 }
 
 .concept-article-section p,
 .definition-list {
   color: #333;
-  font-size: 11px;
+  font-size: 15px;
   line-height: 1.75;
 }
 
@@ -1472,24 +1454,24 @@ button {
 
 .level-badge {
   display: inline-grid;
-  height: 18px;
-  margin: 3px 0 15px;
-  padding: 0 8px;
+  height: 22px;
+  margin: 6px 0 18px;
+  padding: 0 10px;
   place-items: center;
   background: #ffe5e5;
   border-radius: 999px;
   color: #f05d5d;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
 }
 
 .example-box,
 .practice-box {
-  margin-top: 13px;
-  padding: 15px 18px;
+  margin-top: 18px;
+  padding: 22px 26px;
   background: #fff;
   border: 1px solid #d9d9d9;
-  border-radius: 6px;
+  border-radius: 7px;
 }
 
 .example-box strong,
@@ -1497,14 +1479,14 @@ button {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
   color: #333;
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 900;
 }
 
 .example-box strong span {
-  font-size: 15px;
+  font-size: 20px;
 }
 
 .practice-box {
@@ -1513,13 +1495,13 @@ button {
 
 .practice-box strong span {
   display: inline-grid;
-  height: 18px;
-  padding: 0 8px;
+  height: 22px;
+  padding: 0 10px;
   place-items: center;
   background: #d8e9ff;
   border-radius: 999px;
   color: #2c82ef;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .practice-box strong span.green {
@@ -1529,7 +1511,7 @@ button {
 
 .example-box p,
 .practice-box p {
-  margin: 0 0 9px;
+  margin: 0 0 12px;
 }
 
 .example-box p:last-child,
@@ -1538,20 +1520,20 @@ button {
 }
 
 .practice-box details {
-  margin: 10px -18px -15px;
+  margin: 16px -26px -22px;
   border-top: 1px solid #d9d9d9;
   background: #fff;
 }
 
 .practice-box summary {
-  padding: 8px 18px;
+  padding: 12px 26px;
   color: #8a8a8a;
-  font-size: 11px;
+  font-size: 14px;
   cursor: pointer;
 }
 
 .practice-box details p {
-  padding: 0 18px 12px;
+  padding: 0 26px 16px;
 }
 
 .scroll-top {
