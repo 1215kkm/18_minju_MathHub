@@ -1168,9 +1168,9 @@ button {
   font-weight: 600;
 }
 
-.book-meta button:first-child {
-  color: #333;
-  font-weight: 800;
+.book-meta button.active {
+  color: #111;
+  font-weight: 900;
 }
 
 .book-list {
@@ -1896,6 +1896,10 @@ button {
   overflow: hidden;
   border: 1px solid #b8b8b8;
   border-radius: 6px;
+}
+
+.exam-filter.is-collapsed .filter-row:not(.search-row) {
+  display: none;
 }
 
 .filter-row {
