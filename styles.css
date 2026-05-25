@@ -46,6 +46,11 @@ button {
   cursor: pointer;
 }
 
+.menu-button,
+.mobile-menu {
+  display: none;
+}
+
 .site-header {
   position: relative;
   z-index: 20;
@@ -2660,5 +2665,946 @@ button {
   .guide-tag {
     position: static;
     margin: 12px 0 8px 12px;
+  }
+}
+
+@media (max-width: 760px) {
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  body.menu-open {
+    overflow: hidden;
+  }
+
+  .site-header,
+  .site-header.sub-header {
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    height: 49px;
+    margin: 0;
+    padding: 0 21px;
+    flex-direction: row;
+    gap: 0;
+    justify-content: space-between;
+  }
+
+  .logo,
+  .footer-logo {
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .menu-button {
+    position: relative;
+    display: block;
+    flex: 0 0 24px;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    background: transparent;
+    z-index: 101;
+  }
+
+  .site-header .menu-button {
+    position: fixed !important;
+    top: 12px !important;
+    right: 21px !important;
+  }
+
+  .menu-button::before,
+  .menu-button::after {
+    position: absolute;
+    right: 0;
+    width: 17px;
+    height: 2px;
+    background: #2a2a2a;
+    border-radius: 999px;
+    content: "";
+  }
+
+  .menu-button::before {
+    top: 6px;
+  }
+
+  .menu-button::after {
+    top: 16px;
+  }
+
+  .menu-button span {
+    position: absolute;
+    right: 0;
+    display: block;
+    width: 17px;
+    height: 2px;
+    background: #2a2a2a;
+    border-radius: 999px;
+  }
+
+  .menu-button span:first-child {
+    display: none;
+  }
+
+  .menu-button span:nth-child(2) {
+    top: 11px;
+  }
+
+  .menu-button span:last-child {
+    display: none;
+  }
+
+  .mobile-menu {
+    position: fixed;
+    inset: 49px 0 0;
+    z-index: 99;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 152px;
+    background: #c7ddff;
+    color: #233b69;
+    text-align: center;
+  }
+
+  .mobile-menu.is-open {
+    display: flex;
+  }
+
+  .mobile-menu > a,
+  .mobile-country-toggle {
+    margin: 0 0 54px;
+    background: transparent;
+    color: #233b69;
+    font-size: 20px;
+    font-weight: 900;
+  }
+
+  .mobile-country-toggle {
+    margin-bottom: 28px;
+  }
+
+  .mobile-country-options {
+    display: none;
+    gap: 18px;
+    justify-items: center;
+    margin-top: -8px;
+  }
+
+  .mobile-menu.country-open .mobile-country-options {
+    display: grid;
+  }
+
+  .mobile-country-options a {
+    display: inline-grid;
+    min-height: 30px;
+    place-items: center;
+    padding: 0 15px;
+    background: #fff;
+    border-radius: 999px;
+    color: #233b69;
+    font-size: 16px;
+    font-weight: 800;
+  }
+
+  .mobile-close {
+    position: absolute;
+    bottom: 58px;
+    left: 50%;
+    display: grid;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    background: #fff;
+    border-radius: 50%;
+    color: #233b69;
+    font-size: 42px;
+    font-weight: 300;
+    line-height: 1;
+    transform: translateX(-50%);
+  }
+
+  .hero {
+    min-height: 520px;
+  }
+
+  .hero::after {
+    height: 86px;
+    bottom: -32px;
+  }
+
+  .hero-content {
+    width: calc(100% - 32px);
+    padding-top: 34px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+    line-height: 1.18;
+  }
+
+  .hero p {
+    margin: 19px 0 10px;
+    font-size: 11px;
+  }
+
+  .search-box {
+    width: 198px;
+    height: 30px;
+    padding-left: 13px;
+  }
+
+  .search-box input {
+    font-size: 9px;
+  }
+
+  .exam-logos {
+    gap: 9px;
+    margin-top: 26px;
+  }
+
+  .exam-logo {
+    width: 45px;
+    height: 39px;
+    border-radius: 4px;
+  }
+
+  .curriculum-section {
+    padding-top: 52px;
+  }
+
+  .section-heading h2 {
+    font-size: 24px;
+  }
+
+  .section-heading p {
+    font-size: 11px;
+  }
+
+  .curriculum-grid {
+    width: calc(100% - 32px);
+    margin-top: 40px;
+    gap: 16px;
+  }
+
+  .curriculum-card {
+    padding: 19px 16px 18px;
+    border-radius: 6px;
+  }
+
+  .card-title {
+    font-size: 16px;
+  }
+
+  .resource-box {
+    min-height: 79px;
+    padding: 13px;
+  }
+
+  .features-section {
+    padding: 92px 0 72px;
+  }
+
+  .feature-list {
+    width: calc(100% - 38px);
+    margin-top: 47px;
+    gap: 57px;
+  }
+
+  .feature-row {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .feature-copy h3 {
+    font-size: 18px;
+  }
+
+  .feature-copy p,
+  .feature-copy li {
+    font-size: 12px;
+  }
+
+  .feature-row img {
+    border-radius: 14px;
+  }
+
+  .reviews-section {
+    padding: 58px 0 70px;
+  }
+
+  .review-card {
+    flex-basis: 145px;
+    min-height: 190px;
+    padding: 18px 15px;
+  }
+
+  .site-footer .footer-inner,
+  .sub-footer .footer-inner {
+    width: calc(100% - 28px);
+    grid-template-columns: 1fr;
+    justify-items: start;
+    gap: 0;
+    padding: 35px 0 31px;
+    text-align: left;
+  }
+
+  .site-footer nav {
+    display: grid;
+    justify-content: start;
+    gap: 18px;
+    margin-top: 24px;
+    font-size: 12px;
+  }
+
+  .footer-line {
+    width: 100%;
+    margin: 28px 0 13px;
+  }
+
+  .site-footer p {
+    font-size: 9px;
+  }
+
+  .language-list {
+    justify-content: start;
+    gap: 8px;
+    margin-top: 11px;
+    font-size: 23px;
+  }
+
+  .concept-hero,
+  .exam-hero,
+  .workbook-hero {
+    min-height: 96px;
+    padding: 20px 16px 22px;
+  }
+
+  .concept-hero h1,
+  .exam-hero h1,
+  .workbook-hero h1 {
+    width: 100%;
+    font-size: 23px;
+    line-height: 1.25;
+    text-align: center;
+  }
+
+  .concept-hero p,
+  .exam-hero p,
+  .workbook-hero p {
+    margin-top: 10px;
+    font-size: 11px;
+  }
+
+  .concept-layout,
+  .detail-layout {
+    display: block;
+    width: calc(100% - 28px);
+    max-width: 100%;
+    margin-top: 26px;
+    padding-bottom: 58px;
+  }
+
+  .concept-sidebar {
+    position: static;
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    max-height: none;
+    gap: 10px;
+    overflow: visible;
+    margin-bottom: 35px;
+  }
+
+  .stage-pill {
+    order: 1 !important;
+    grid-row: 1 !important;
+    min-width: 0;
+    min-height: 39px;
+    padding: 0 8px;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: 800;
+    white-space: nowrap;
+  }
+
+  .side-panel {
+    order: 2 !important;
+    grid-column: 1 / -1 !important;
+    grid-row: 2 !important;
+    width: 100%;
+    min-height: auto;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+  }
+
+  .side-group.open button {
+    width: 236px;
+    height: 38px;
+    margin: 0 auto 21px;
+    padding: 0 18px;
+    border: 1px solid #dedede;
+    border-radius: 999px;
+    color: #555;
+    font-size: 13px;
+    justify-content: space-between;
+  }
+
+  .side-group.open ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    overflow-x: auto;
+    padding: 0 0 14px;
+    border-bottom: 1px solid #dedede;
+    white-space: nowrap;
+  }
+
+  .side-group.open ul li {
+    color: #333;
+    font-size: 13px;
+  }
+
+  .side-group li a,
+  .side-group ol li a {
+    padding: 0;
+  }
+
+  .side-group li.active {
+    background: transparent;
+    color: #2b84ff;
+  }
+
+  .side-group li.active a {
+    border-left: 0;
+  }
+
+  .side-group.collapsed {
+    display: none;
+  }
+
+  .detail-sidebar {
+    display: block;
+    margin-bottom: 29px;
+  }
+
+  .detail-sidebar .stage-pill {
+    display: none;
+  }
+
+  .detail-panel {
+    padding: 0;
+  }
+
+  .detail-panel .side-group.open button {
+    width: 236px;
+    margin-bottom: 13px;
+  }
+
+  .detail-panel .side-group.open ol {
+    display: grid;
+    gap: 0;
+    padding: 0;
+  }
+
+  .detail-panel .side-group.open ol li {
+    padding: 7px 12px;
+    font-size: 11px;
+    line-height: 1.35;
+  }
+
+  .detail-panel .side-group.open ol li.active {
+    background: #eaf3ff;
+  }
+
+  .breadcrumb {
+    display: none;
+  }
+
+  .before-card {
+    padding: 25px 18px 27px;
+    border-radius: 6px;
+  }
+
+  .before-title {
+    gap: 7px;
+    margin-bottom: 24px;
+  }
+
+  .idea-icon {
+    font-size: 25px;
+  }
+
+  .before-title h2 {
+    font-size: 18px;
+    line-height: 1.35;
+  }
+
+  .notice-line {
+    min-height: 83px;
+    padding: 14px 17px;
+    align-items: start;
+    font-size: 15px;
+  }
+
+  .unit-head {
+    display: block;
+    margin: 59px 0 0;
+    padding-bottom: 19px;
+  }
+
+  .unit-head h2,
+  .lesson-title h2 {
+    font-size: 26px;
+  }
+
+  .unit-head p,
+  .lesson-title p {
+    font-size: 13px;
+    line-height: 1.45;
+  }
+
+  .unit-search {
+    width: 100%;
+    height: 35px;
+    margin-top: 14px;
+  }
+
+  .lesson-list {
+    gap: 39px;
+    margin: 35px 0 0;
+  }
+
+  .lesson-card {
+    position: relative;
+    display: block !important;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    min-height: 123px;
+    padding: 24px 18px 66px;
+    border-radius: 6px;
+  }
+
+  .lesson-card h3 {
+    font-size: 24px;
+    overflow-wrap: anywhere;
+  }
+
+  .lesson-card p {
+    font-size: 16px;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+  }
+
+  .lesson-card a {
+    display: grid !important;
+    position: absolute !important;
+    right: 18px !important;
+    bottom: 18px !important;
+    width: 90px;
+    min-width: 90px;
+    height: 34px;
+    margin: 14px 0 0 auto;
+    font-size: 13px;
+  }
+
+  .lesson-title {
+    padding-bottom: 17px;
+  }
+
+  .concept-article-section {
+    padding: 32px 0 42px;
+  }
+
+  .concept-article-section h3 {
+    font-size: 18px;
+  }
+
+  .concept-article-section .lead {
+    font-size: 11px;
+  }
+
+  .concept-article-section p,
+  .definition-list {
+    font-size: 11px;
+    line-height: 1.72;
+  }
+
+  .level-badge {
+    height: 18px;
+    font-size: 9px;
+  }
+
+  .example-box,
+  .practice-box {
+    padding: 16px;
+    border-radius: 4px;
+  }
+
+  .example-box strong,
+  .practice-box strong {
+    font-size: 11px;
+  }
+
+  .practice-box details {
+    margin: 12px -16px -16px;
+  }
+
+  .practice-box summary {
+    padding: 8px 16px;
+    font-size: 10px;
+  }
+
+  .practice-box details p {
+    padding: 0 16px 12px;
+  }
+
+  .scroll-top {
+    right: 22px;
+    bottom: 118px;
+  }
+
+  .exam-content,
+  .workbook-content {
+    width: calc(100% - 28px);
+    margin-top: 30px;
+    padding-bottom: 56px;
+  }
+
+  .exam-content > h2,
+  .workbook-content > h2 {
+    margin-bottom: 27px;
+    font-size: 18px;
+  }
+
+  .exam-filter {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 7px;
+  }
+
+  .filter-row,
+  .workbook-filter .filter-row {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .filter-label {
+    min-height: 42px;
+    justify-content: start;
+    padding-left: 23px;
+    font-size: 14px;
+  }
+
+  .filter-options,
+  .workbook-filter .filter-options {
+    min-width: 0;
+    min-height: 58px;
+    gap: 10px 14px;
+    padding: 13px 14px;
+    overflow: hidden;
+  }
+
+  .radio-options label {
+    font-size: 14px;
+  }
+
+  .filter-chip,
+  .workbook-filter .filter-chip {
+    height: 28px;
+    padding: 0 15px;
+    font-size: 12px;
+  }
+
+  .selected-tags {
+    gap: 7px;
+    min-width: 0;
+    flex-wrap: wrap;
+  }
+
+  .selected-tags span {
+    height: 25px;
+    padding: 0 11px;
+    font-size: 10px;
+  }
+
+  .exam-search,
+  .workbook-filter .exam-search {
+    flex: 1 1 0;
+    width: auto;
+    min-width: 0;
+    height: 40px;
+  }
+
+  .exam-search input,
+  .workbook-filter .exam-search input {
+    font-size: 11px;
+  }
+
+  .search-submit,
+  .workbook-filter .search-submit {
+    width: 55px;
+    height: 40px;
+    font-size: 13px;
+  }
+
+  .filter-actions {
+    margin-top: 12px;
+  }
+
+  .filter-actions button,
+  .workbook-actions button {
+    font-size: 12px;
+  }
+
+  .exam-results {
+    margin: 62px 4px 0;
+  }
+
+  .exam-results > h2 {
+    font-size: 22px;
+  }
+
+  .result-divider {
+    margin-bottom: 26px;
+  }
+
+  .exam-result-group h3 {
+    font-size: 16px;
+  }
+
+  .download-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 13px;
+  }
+
+  .download-card {
+    grid-template-columns: 42px 1fr;
+    min-height: 96px;
+    padding: 0 5px;
+    border: 0;
+  }
+
+  .download-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+  }
+
+  .download-card strong {
+    font-size: 15px;
+  }
+
+  .download-card span {
+    font-size: 11px;
+  }
+
+  .download-card button {
+    grid-column: 1 / -1;
+    width: 96px;
+    height: 34px;
+    margin: 8px auto 0;
+    padding: 0;
+    font-size: 14px;
+  }
+
+  .analysis-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 21px;
+  }
+
+  .score-panel,
+  .wrong-panel {
+    min-height: 0;
+  }
+
+  .score-panel h4,
+  .wrong-panel h4 {
+    height: 31px;
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  .score-panel table {
+    font-size: 11px;
+  }
+
+  .wrong-panel ol {
+    gap: 13px;
+    margin: 17px 19px 20px;
+  }
+
+  .wrong-panel li {
+    grid-template-columns: 35px 1fr 42px;
+    font-size: 11px;
+  }
+
+  .book-meta {
+    gap: 12px;
+    margin-top: 64px;
+    overflow: hidden;
+  }
+
+  .book-meta div {
+    flex: 0 0 auto;
+  }
+
+  .book-meta p,
+  .book-meta button,
+  .book-meta span {
+    font-size: 11px;
+  }
+
+  .book-list {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+  }
+
+  .book-item {
+    grid-template-columns: 110px minmax(0, 1fr);
+    gap: 18px;
+    min-height: 170px;
+    padding: 25px 0;
+  }
+
+  .book-item img {
+    width: 110px;
+    height: 148px;
+  }
+
+  .book-copy h3 {
+    min-height: 0;
+    font-size: 18px;
+    line-height: 1.24;
+  }
+
+  .book-copy p {
+    margin: 8px 0 28px;
+    font-size: 10px;
+  }
+
+  .book-buttons {
+    gap: 5px;
+  }
+
+  .book-buttons a,
+  .book-buttons button {
+    min-width: 83px;
+    height: 29px;
+    font-size: 11px;
+  }
+
+  .more-books {
+    height: 38px;
+    font-size: 12px;
+  }
+
+  .global-hero {
+    min-height: 102px;
+    padding: 24px 14px;
+  }
+
+  .global-hero h1 {
+    font-size: 22px;
+  }
+
+  .global-hero p {
+    margin-top: 11px;
+    font-size: 10px;
+  }
+
+  .global-content {
+    width: calc(100% - 28px);
+    margin: 26px auto 50px;
+  }
+
+  .practice-section h2,
+  .testbook-section h2,
+  .guide-section h2 {
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+
+  .practice-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+  }
+
+  .practice-card {
+    height: 110px;
+    padding: 13px 8px;
+  }
+
+  .practice-card p {
+    font-size: 10px;
+  }
+
+  .ap-resource {
+    font-size: 38px;
+  }
+
+  .testbook-section,
+  .guide-section {
+    margin-top: 45px;
+  }
+
+  .testbook-layout {
+    display: block;
+  }
+
+  .testbook-tabs {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-bottom: 22px;
+  }
+
+  .testbook-tabs button {
+    height: 42px;
+    padding: 0 14px;
+    font-size: 15px;
+  }
+
+  .chapter-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .chapter-card {
+    min-height: 125px;
+    padding: 18px 18px;
+  }
+
+  .chapter-card h3 {
+    font-size: 17px;
+  }
+
+  .chapter-card p {
+    font-size: 13px;
+  }
+
+  .guide-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 15px 0 0;
+  }
+
+  .guide-card img {
+    height: 187px;
+  }
+
+  .guide-card h3 {
+    font-size: 17px;
+  }
+
+  .guide-card p {
+    font-size: 11px;
   }
 }

@@ -11,7 +11,7 @@
       crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
     />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css?v=mobile-2" />
   </head>
   <body>
     <header class="site-header sub-header">
@@ -22,6 +22,19 @@
         <a href="./workbooks.html">문제집 &amp; 해설</a>
         <a href="./global.html">국가별 과정</a>
       </nav>
+      <button class="menu-button" type="button" aria-label="메뉴 열기" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="mobile-menu" aria-hidden="true">
+        <a href="./concepts.html">개념완성</a>
+        <a href="./past-exams.html">기출 문제</a>
+        <a href="./workbooks.html">문제집&amp;해설</a>
+        <button class="mobile-country-toggle" type="button">국가별 과정 <span>⌄</span></button>
+        <div class="mobile-country-options">
+          <a href="./global.html">🇺🇸 USA</a>
+          <a href="./global.html">🇬🇧 United Kingdom</a>
+          <a href="./global.html">🇨🇦 Canada</a>
+        </div>
+        <button class="mobile-close" type="button" aria-label="메뉴 닫기">×</button>
+      </div>
     </header>
 
     <main class="concept-page detail-page">
@@ -212,6 +225,7 @@
         </div>
       </div>
     </footer>
+    <script src="./site.js"></script>
     <script src="./concept-detail.js"></script>
   </body>
 </html>
