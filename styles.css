@@ -51,8 +51,8 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: min(1390px, calc(100% - 64px));
-  height: 96px;
+  width: min(1160px, calc(100% - 64px));
+  height: 132px;
   margin: 0 auto;
   background: #fff;
 }
@@ -1018,11 +1018,6 @@ button {
 }
 
 /* Concept pages */
-.sub-header {
-  width: min(1160px, calc(100% - 64px));
-  height: 132px;
-}
-
 .concept-page {
   background: #fff;
 }
