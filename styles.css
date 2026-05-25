@@ -57,7 +57,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: min(1160px, calc(100% - 64px));
+  width: min(var(--content-wide), calc(100% - 64px));
   height: 132px;
   margin: 0 auto;
   background: #fff;
@@ -79,7 +79,7 @@ button {
 .nav {
   display: flex;
   align-items: center;
-  gap: 86px;
+  gap: clamp(86px, 7vw, 128px);
   color: #111827;
   font-size: 20px;
   font-weight: 800;
@@ -157,7 +157,7 @@ button {
 .hero h1 {
   margin: 0;
   color: #233b69;
-  font-size: 48px;
+  font-size: 56px;
   font-weight: 900;
   line-height: 1.22;
   letter-spacing: 0;
@@ -166,7 +166,7 @@ button {
 .hero p {
   margin: 34px 0 18px;
   color: #314560;
-  font-size: 17px;
+  font-size: 20px;
   font-weight: 600;
 }
 
@@ -197,7 +197,7 @@ button {
   border: 0;
   outline: 0;
   color: #32445d;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
 }
 
@@ -422,7 +422,7 @@ button {
 .section-heading h2 {
   margin: 0;
   color: var(--ink);
-  font-size: 34px;
+  font-size: 42px;
   font-weight: 900;
   line-height: 1.38;
   letter-spacing: 0;
@@ -431,7 +431,7 @@ button {
 .section-heading p {
   margin: 18px 0 0;
   color: var(--muted);
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 600;
 }
 
@@ -445,7 +445,7 @@ button {
 
 .curriculum-card {
   position: relative;
-  padding: 25px 24px 24px;
+  padding: 30px 30px 28px;
   overflow: hidden;
   background: #fff;
   border: 1px solid var(--line);
@@ -487,14 +487,14 @@ button {
   align-items: center;
   gap: 9px;
   margin-bottom: 20px;
-  font-size: 19px;
+  font-size: 23px;
   font-weight: 900;
 }
 
 .card-title a {
   display: grid;
-  width: 31px;
-  height: 31px;
+  width: 36px;
+  height: 36px;
   margin-left: auto;
   place-items: center;
   background: #eff6ff;
@@ -511,8 +511,8 @@ button {
 }
 
 .resource-box {
-  min-height: 94px;
-  padding: 18px;
+  min-height: 108px;
+  padding: 21px;
   background: var(--panel);
   border: 1px solid #d8e4f4;
   border-radius: 9px;
@@ -527,7 +527,7 @@ button {
   display: block;
   margin-bottom: 13px;
   color: #315b9a;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 900;
 }
 
@@ -538,12 +538,12 @@ button {
 }
 
 .chips span {
-  padding: 5px 10px;
+  padding: 6px 12px;
   background: #fff;
   border: 1px solid #d6e0ef;
   border-radius: 999px;
   color: #7d8aa0;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 700;
   transition: background 160ms ease, border-color 160ms ease, color 160ms ease;
 }
@@ -664,25 +664,25 @@ button {
 
 .feature-row {
   display: grid;
-  grid-template-columns: minmax(330px, 440px) minmax(620px, 1fr);
+  grid-template-columns: minmax(360px, 470px) minmax(700px, 1fr);
   align-items: center;
   gap: 140px;
 }
 
 .feature-copy {
-  max-width: 330px;
+  max-width: 390px;
 }
 
 .feature-icon {
   display: grid;
-  width: 38px;
-  height: 38px;
+  width: 44px;
+  height: 44px;
   margin-bottom: 22px;
   place-items: center;
   background: linear-gradient(135deg, #2f83ef, #24b8ed);
   border-radius: 6px;
   color: #fff;
-  font-size: 19px;
+  font-size: 21px;
   font-weight: 900;
   box-shadow: 0 12px 22px rgba(43, 125, 234, 0.26);
   transition: transform 180ms ease;
@@ -695,7 +695,7 @@ button {
 .feature-copy h3 {
   margin: 0 0 15px;
   color: var(--ink);
-  font-size: 22px;
+  font-size: 28px;
   font-weight: 900;
   line-height: 1.3;
 }
@@ -703,7 +703,7 @@ button {
 .feature-copy p,
 .feature-copy li {
   color: #4b596f;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 600;
   line-height: 1.7;
 }
@@ -740,7 +740,7 @@ button {
   display: block;
   margin-bottom: 10px;
   color: #334155;
-  font-size: 17px;
+  font-size: 20px;
   font-weight: 700;
 }
 
@@ -760,7 +760,7 @@ button {
 
 .review-track {
   display: flex;
-  gap: 28px;
+  gap: 32px;
   width: max-content;
   padding-left: 28px;
   animation: reviewMarquee 34s linear infinite;
@@ -772,9 +772,9 @@ button {
 }
 
 .review-card {
-  flex: 0 0 210px;
-  min-height: 242px;
-  padding: 24px 22px 20px;
+  flex: 0 0 250px;
+  min-height: 282px;
+  padding: 28px 25px 22px;
   background: #fff;
   border: 1px solid rgba(216, 228, 244, 0.7);
   border-radius: 7px;
@@ -794,10 +794,10 @@ button {
 }
 
 .review-card p {
-  min-height: 106px;
+  min-height: 124px;
   margin: 22px 0 18px;
   color: #293241;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 650;
   line-height: 1.7;
 }
@@ -807,7 +807,7 @@ button {
   align-items: center;
   gap: 10px;
   color: #606c80;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 650;
   line-height: 1.35;
 }
