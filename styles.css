@@ -1017,6 +1017,268 @@ button {
   }
 }
 
+/* Workbooks page */
+.workbook-page {
+  background: #fff;
+}
+
+.workbook-hero {
+  min-height: 200px;
+}
+
+.workbook-hero h1 {
+  font-size: 37px;
+}
+
+.workbook-hero p {
+  margin-top: 22px;
+  color: #333;
+  font-size: 18px;
+}
+
+.workbook-content {
+  width: min(614px, calc(100% - 48px));
+  margin: 64px auto 0;
+  padding-bottom: 130px;
+}
+
+.workbook-content > h2 {
+  margin: 0 0 30px;
+  color: #242424;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.workbook-filter .filter-row {
+  grid-template-columns: 106px 1fr;
+}
+
+.workbook-filter .filter-label {
+  font-size: 12px;
+}
+
+.workbook-filter .filter-options {
+  gap: 11px 18px;
+  padding: 10px 20px;
+}
+
+.workbook-filter .radio-options {
+  gap: 42px;
+}
+
+.workbook-filter .filter-chip {
+  min-width: auto;
+  height: 25px;
+  padding: 0 16px;
+  font-size: 11px;
+}
+
+.publisher-row {
+  min-height: 108px;
+}
+
+.publisher-options {
+  align-content: center;
+}
+
+.workbook-search-options {
+  align-content: center;
+  gap: 8px;
+}
+
+.selected-tags {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+
+.selected-tags span {
+  display: inline-grid;
+  height: 25px;
+  padding: 0 16px;
+  place-items: center;
+  background: #f7f7f7;
+  border: 1px solid #dfdfdf;
+  border-radius: 999px;
+  color: #7a7a7a;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.workbook-filter .exam-search {
+  width: 340px;
+  height: 31px;
+}
+
+.workbook-filter .exam-search input {
+  font-size: 11px;
+}
+
+.workbook-filter .search-submit {
+  width: 52px;
+  height: 31px;
+  font-size: 12px;
+}
+
+.workbook-actions {
+  margin-top: 12px;
+}
+
+.workbook-actions button {
+  font-size: 12px;
+}
+
+.book-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 51px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #bdbdbd;
+}
+
+.book-meta p {
+  margin: 0;
+  color: #555;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.book-meta strong {
+  color: #2686ff;
+}
+
+.book-meta div {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.book-meta button,
+.book-meta span {
+  background: transparent;
+  color: #999;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.book-meta button:first-child {
+  color: #333;
+  font-weight: 800;
+}
+
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 34px;
+}
+
+.book-item {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr);
+  gap: 19px;
+  min-height: 190px;
+  padding: 31px 0 28px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.book-item img {
+  width: 96px;
+  height: 128px;
+  object-fit: cover;
+  background: #f7f7f7;
+}
+
+.book-copy {
+  min-width: 0;
+}
+
+.book-copy h3 {
+  min-height: 48px;
+  margin: 0;
+  color: #1f1f1f;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.22;
+}
+
+.book-copy p {
+  margin: 8px 0 30px;
+  color: #8f8f8f;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.book-buttons {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.book-buttons a,
+.book-buttons button {
+  display: grid;
+  height: 29px;
+  place-items: center;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+  transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+}
+
+.book-buttons a {
+  min-width: 84px;
+  background: #213f73;
+  color: #fff;
+}
+
+.book-buttons button {
+  min-width: 84px;
+  background: #fff;
+  border: 1px solid #ccd5df;
+  color: #9aa7b5;
+}
+
+.book-buttons a:hover,
+.book-buttons button:hover {
+  transform: translateY(-2px);
+}
+
+.book-buttons button:hover {
+  border-color: #9fc4f8;
+  background: #f4f8ff;
+}
+
+.more-books {
+  display: grid;
+  width: 100%;
+  height: 32px;
+  margin-top: 23px;
+  place-items: center;
+  background: #fff;
+  border: 1px solid #e2e2e2;
+  border-radius: 5px;
+  color: #9b9b9b;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+@media (max-width: 760px) {
+  .workbook-content {
+    width: min(100% - 32px, 614px);
+  }
+
+  .book-list,
+  .book-item {
+    grid-template-columns: 1fr;
+  }
+
+  .book-item img {
+    width: 120px;
+    height: 160px;
+  }
+}
+
 /* Concept pages */
 .concept-page {
   background: #fff;

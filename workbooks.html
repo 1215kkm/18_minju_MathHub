@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문제집 & 해설 | MathHub</title>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header sub-header">
+      <a class="logo" href="./index.html" aria-label="MathHub home">Math<span>Hub</span></a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="./concepts.html">개념 완성</a>
+        <a href="./past-exams.html">기출 문제</a>
+        <a href="./workbooks.html">문제집 &amp; 해설</a>
+        <a href="./index.html#curriculum">국가별 과정</a>
+      </nav>
+    </header>
+
+    <main class="workbook-page">
+      <section class="exam-hero workbook-hero">
+        <h1>문제집 선택도 전략입니다.</h1>
+        <p>핵심 개념과 풀이 과정을 함께 제공합니다</p>
+      </section>
+
+      <section class="workbook-content">
+        <h2>문제집 &amp; 해설</h2>
+
+        <form class="exam-filter workbook-filter" aria-label="문제집 검색 필터">
+          <div class="filter-row">
+            <div class="filter-label">학급</div>
+            <div class="filter-options radio-options">
+              <label><input type="radio" name="school" checked /> 중등</label>
+              <label><input type="radio" name="school" /> 고등</label>
+            </div>
+          </div>
+          <div class="filter-row">
+            <div class="filter-label">교재 등급</div>
+            <div class="filter-options">
+              <button class="filter-chip" type="button">초급</button>
+              <button class="filter-chip" type="button">중급</button>
+              <button class="filter-chip" type="button">상급</button>
+              <button class="filter-chip" type="button">수능</button>
+            </div>
+          </div>
+          <div class="filter-row publisher-row">
+            <div class="filter-label">출판사</div>
+            <div class="filter-options publisher-options">
+              <button class="filter-chip" type="button">전체</button>
+              <button class="filter-chip active" type="button">좋은책 신사고</button>
+              <button class="filter-chip" type="button">비상교육</button>
+              <button class="filter-chip" type="button">디딤돌</button>
+              <button class="filter-chip" type="button">지학사</button>
+              <button class="filter-chip" type="button">수경</button>
+              <button class="filter-chip" type="button">개념원리</button>
+              <button class="filter-chip" type="button">에이급</button>
+              <button class="filter-chip active" type="button">천재교육</button>
+            </div>
+          </div>
+          <div class="filter-row">
+            <div class="filter-label">출간연도</div>
+            <div class="filter-options">
+              <button class="filter-chip" type="button">2025</button>
+              <button class="filter-chip" type="button">2026</button>
+            </div>
+          </div>
+          <div class="filter-row search-row">
+            <div class="filter-label">검색</div>
+            <div class="filter-options search-options workbook-search-options">
+              <div class="selected-tags">
+                <span>중등 ×</span>
+                <span>좋은책 신사고 ×</span>
+                <span>천재교육 ×</span>
+              </div>
+              <label class="exam-search">
+                <span></span>
+                <input type="search" placeholder="검색어를 입력해 주세요" />
+              </label>
+              <button class="search-submit" type="submit">검색</button>
+            </div>
+          </div>
+        </form>
+
+        <div class="filter-actions workbook-actions">
+          <button type="button">↻ 초기화</button>
+          <button type="button">검색 옵션 접기 ⓘ</button>
+        </div>
+
+        <div class="book-meta">
+          <p>전체 125개 <strong>10개</strong></p>
+          <div><button type="button">최신순</button><span>|</span><button type="button">다운로드순</button><span>|</span><button type="button">인기순</button></div>
+        </div>
+
+        <section class="book-list" aria-label="문제집 목록">
+          <article class="book-item">
+            <img src="./assets/images/image-313.png" alt="쎈 중등 수학 표지" />
+            <div class="book-copy">
+              <h3>쎈 중등 수학</h3>
+              <p>좋은책신사고 | 2025년 09월</p>
+              <div class="book-buttons"><a href="#">▣ 바로가기</a><button type="button">↓ PDF 다운</button></div>
+            </div>
+          </article>
+          <article class="book-item">
+            <img src="./assets/images/image-314.png" alt="쎈 고등 대수 표지" />
+            <div class="book-copy">
+              <h3>쎈 고등 대수</h3>
+              <p>좋은책신사고 | 2025년 11월</p>
+              <div class="book-buttons"><a href="#">▣ 바로가기</a><button type="button">↓ PDF 다운</button></div>
+            </div>
+          </article>
+          <article class="book-item">
+            <img src="./assets/images/image-313-01.png" alt="올백 기출문제집 표지" />
+            <div class="book-copy">
+              <h3>올백 기출문제집<br />수학 중 3-1 중간고사</h3>
+              <p>천재교육 | 2020년 09월</p>
+              <div class="book-buttons"><a href="#">▣ 바로가기</a><button type="button">↓ PDF 다운</button></div>
+            </div>
+          </article>
+          <article class="book-item">
+            <img src="./assets/images/image-314-01.png" alt="EBS 수능특강 확률과 통계 표지" />
+            <div class="book-copy">
+              <h3>EBS 수능특강 수학영역<br />확률과 통계</h3>
+              <p>한국교육방송공사(EBS) | 2025년 11월</p>
+              <div class="book-buttons"><a href="#">▣ 바로가기</a><button type="button">↓ PDF 다운</button></div>
+            </div>
+          </article>
+          <article class="book-item">
+            <img src="./assets/images/image-313-02.png" alt="메가스터디 수능수학 표지" />
+            <div class="book-copy">
+              <h3>메가스터디 수능수학<br />킥(KICK) 수학-2</h3>
+              <p>메가스터디북스 | 2021년 11월</p>
+              <div class="book-buttons"><a href="#">▣ 바로가기</a><button type="button">↓ PDF 다운</button></div>
+            </div>
+          </article>
+          <article class="book-item">
+            <img src="./assets/images/image-314-01.png" alt="EBS 수능특강 확률과 통계 표지" />
+            <div class="book-copy">
+              <h3>EBS 수능특강 수학영역<br />확률과 통계</h3>
+              <p>좋은책신사고 | 2025년 11월</p>
+              <div class="book-buttons"><a href="#">▣ 바로가기</a><button type="button">↓ PDF 다운</button></div>
+            </div>
+          </article>
+          <article class="book-item">
+            <img src="./assets/images/image-313.png" alt="쎈 중등 수학 표지" />
+            <div class="book-copy">
+              <h3>쎈 중등 수학</h3>
+              <p>좋은책신사고 | 2025년 09월</p>
+              <div class="book-buttons"><a href="#">▣ 바로가기</a><button type="button">↓ PDF 다운</button></div>
+            </div>
+          </article>
+          <article class="book-item">
+            <img src="./assets/images/image-314.png" alt="쎈 고등 대수 표지" />
+            <div class="book-copy">
+              <h3>쎈 고등 대수</h3>
+              <p>좋은책신사고 | 2025년 11월</p>
+              <div class="book-buttons"><a href="#">▣ 바로가기</a><button type="button">↓ PDF 다운</button></div>
+            </div>
+          </article>
+          <article class="book-item">
+            <img src="./assets/images/image-313-03.png" alt="개념원리 RPM 표지" />
+            <div class="book-copy">
+              <h3>개념원리 RPM<br />고등 수학1</h3>
+              <p>개념원리 | 2022년 06월</p>
+              <div class="book-buttons"><a href="#">▣ 바로가기</a><button type="button">↓ PDF 다운</button></div>
+            </div>
+          </article>
+          <article class="book-item">
+            <img src="./assets/images/image-314-02.png" alt="100발100중 표지" />
+            <div class="book-copy">
+              <h3>100발100중 기출문제집<br />1학기 중간고사 중등 수학 3</h3>
+              <p>좋은책신사고 | 2025년 11월</p>
+              <div class="book-buttons"><a href="#">▣ 바로가기</a><button type="button">↓ PDF 다운</button></div>
+            </div>
+          </article>
+        </section>
+
+        <button class="more-books" type="button">더보기</button>
+      </section>
+    </main>
+
+    <footer class="site-footer sub-footer">
+      <div class="footer-inner">
+        <a class="footer-logo" href="./index.html">MathHub</a>
+        <nav aria-label="Footer navigation">
+          <a href="#">About Us</a>
+          <a href="#">Contact</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Support Us</a>
+        </nav>
+        <div class="footer-line"></div>
+        <p>© 2026 MathHub. All rights reserved.</p>
+        <div class="language-list" aria-label="Languages">
+          <span>🇰🇷</span><span>🇺🇸</span><span>🇬🇧</span><span>🇨🇦</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
