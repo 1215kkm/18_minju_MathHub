@@ -46,6 +46,10 @@ button {
   cursor: pointer;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 .menu-button,
 .mobile-menu {
   display: none;
@@ -249,6 +253,13 @@ button {
   color: #315889;
   font-size: 12px;
   font-weight: 700;
+}
+
+.search-feedback a {
+  color: #176ed8;
+  font-weight: 900;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .exam-logos {
@@ -1269,6 +1280,29 @@ button {
   font-weight: 700;
 }
 
+.empty-state {
+  grid-column: 1 / -1;
+  margin: 26px 0 0;
+  padding: 24px;
+  background: #f8fbff;
+  border: 1px solid #dfe7f4;
+  border-radius: 8px;
+  color: #667085;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.book-item.is-extra-hidden {
+  display: none;
+}
+
+button.is-clicked {
+  background: #eef5ff !important;
+  border-color: #9fc4f8 !important;
+  color: #2b83ef !important;
+}
+
 @media (max-width: 760px) {
   .workbook-content {
     width: min(100% - 32px, 614px);
@@ -1461,6 +1495,11 @@ button {
   margin-top: 20px;
   padding-top: 10px;
   border-top: 1px solid #e2e2e2;
+}
+
+.side-group.collapsed ul,
+.side-group.collapsed ol {
+  display: none;
 }
 
 .detail-panel .side-group.collapsed {

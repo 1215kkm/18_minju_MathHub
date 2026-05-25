@@ -2,11 +2,21 @@ const searchForm = document.querySelector("[data-search-form]");
 const searchFeedback = document.querySelector("[data-search-feedback]");
 const examButtons = document.querySelectorAll(".exam-logo");
 
+const getSearchTarget = (query) => {
+  const text = query.toLowerCase();
+  if (/sat|ap|amc|psat|maa|usa|미국/.test(text)) return { href: "./global.html", label: "국가별 과정" };
+  if (/기출|모의|수능|학력|exam|past/.test(text)) return { href: "./past-exams.html", label: "기출 문제" };
+  if (/문제집|해설|쎈|rpm|ebs|book/.test(text)) return { href: "./workbooks.html", label: "문제집 & 해설" };
+  if (/개념|소수|유리수|연산|concept/.test(text)) return { href: "./concepts.html", label: "개념 완성" };
+  return { href: "./global.html", label: "통합 자료" };
+};
+
 searchForm?.addEventListener("submit", (event) => {
   event.preventDefault();
   const input = searchForm.querySelector("input");
   const query = input.value.trim() || input.placeholder.replace("# ", "");
-  searchFeedback.textContent = `"${query}" 자료를 찾는 중입니다.`;
+  const target = getSearchTarget(query);
+  searchFeedback.innerHTML = `"${query}" 검색 결과: <a href="${target.href}">${target.label}에서 보기</a>`;
   searchForm.classList.add("is-submitted");
   window.setTimeout(() => searchForm.classList.remove("is-submitted"), 320);
 });
@@ -16,7 +26,10 @@ examButtons.forEach((button) => {
     examButtons.forEach((item) => item.classList.remove("is-active"));
     button.classList.add("is-active");
     const label = button.textContent.replace(/\s+/g, " ").trim();
-    searchFeedback.textContent = `${label} 자료가 선택되었습니다.`;
+    const input = searchForm?.querySelector("input");
+    if (input) input.value = label;
+    const target = getSearchTarget(label);
+    searchFeedback.innerHTML = `${label} 자료가 선택되었습니다. <a href="${target.href}">자료 보러가기</a>`;
   });
 });
 
