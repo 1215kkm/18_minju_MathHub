@@ -16,7 +16,7 @@ searchForm?.addEventListener("submit", (event) => {
   const input = searchForm.querySelector("input");
   const query = input.value.trim() || input.placeholder.replace("# ", "");
   const target = getSearchTarget(query);
-  searchFeedback.innerHTML = `"${query}" 검색 결과: <a href="${target.href}">${target.label}에서 보기</a>`;
+  searchFeedback.innerHTML = `"${query}" 결과 · <a href="${target.href}">${target.label}</a>`;
   searchForm.classList.add("is-submitted");
   window.setTimeout(() => searchForm.classList.remove("is-submitted"), 320);
 });
@@ -29,7 +29,7 @@ examButtons.forEach((button) => {
     const input = searchForm?.querySelector("input");
     if (input) input.value = label;
     const target = getSearchTarget(label);
-    searchFeedback.innerHTML = `${label} 자료가 선택되었습니다. <a href="${target.href}">자료 보러가기</a>`;
+    searchFeedback.innerHTML = `${label} 선택됨 · <a href="${target.href}">자료 보기</a>`;
   });
 });
 
