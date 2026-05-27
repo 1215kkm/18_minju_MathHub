@@ -449,19 +449,23 @@ button {
 .curriculum-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 34px 54px;
-  width: min(var(--content-wide), calc(100% - 64px));
+  align-items: stretch;
+  gap: 38px 56px;
+  width: min(1040px, calc(100% - 64px));
   margin: 78px auto 0;
 }
 
 .curriculum-card {
   position: relative;
-  padding: 30px 30px 28px;
+  display: flex;
+  min-height: 314px;
+  flex-direction: column;
+  padding: 30px 30px 32px;
   overflow: hidden;
   background: #fff;
   border: 1px solid var(--line);
-  border-radius: 10px;
-  box-shadow: 0 10px 24px rgba(40, 65, 110, 0.045);
+  border-radius: 12px;
+  box-shadow: 0 12px 28px rgba(40, 65, 110, 0.055);
   transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 }
 
@@ -497,8 +501,8 @@ button {
   display: flex;
   align-items: center;
   gap: 9px;
-  margin-bottom: 20px;
-  font-size: 23px;
+  margin-bottom: 22px;
+  font-size: 21px;
   font-weight: 900;
 }
 
@@ -522,16 +526,16 @@ button {
 }
 
 .resource-box {
-  min-height: 108px;
-  padding: 21px;
+  min-height: 112px;
+  padding: 20px 22px 21px;
   background: var(--panel);
   border: 1px solid #d8e4f4;
-  border-radius: 9px;
+  border-radius: 10px;
   transition: background 160ms ease, border-color 160ms ease;
 }
 
 .resource-box + .resource-box {
-  margin-top: 12px;
+  margin-top: 16px;
 }
 
 .resource-box strong {
@@ -545,17 +549,21 @@ button {
 .chips {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 9px 8px;
 }
 
 .chips span {
-  padding: 6px 12px;
+  display: inline-flex;
+  min-height: 30px;
+  align-items: center;
+  padding: 6px 11px;
   background: #fff;
   border: 1px solid #d6e0ef;
   border-radius: 999px;
   color: #7d8aa0;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
+  line-height: 1.25;
   transition: background 160ms ease, border-color 160ms ease, color 160ms ease;
 }
 
