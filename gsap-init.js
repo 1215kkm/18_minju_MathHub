@@ -1,3 +1,8 @@
+/* Reveal pre-hidden (FOUC-guarded) elements as soon as JS runs.
+   CSS hides them only while .js is set but .anim-ready is not, so this
+   flips them visible synchronously before any tween paints. */
+document.documentElement.classList.add("anim-ready");
+
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.defaults({ ease: "power3.out", duration: 0.8 });
@@ -11,7 +16,7 @@ if (!prefersReduced) {
   if (header) {
     gsap.from(header, {
       y: -30,
-      opacity: 0,
+      autoAlpha: 0,
       duration: 0.6,
       ease: "power2.out"
     });
@@ -20,16 +25,16 @@ if (!prefersReduced) {
   /* ── Main hero (index.html) ── */
   const heroContent = document.querySelector(".hero-content");
   if (heroContent) {
-    const tl = gsap.timeline({ delay: 0.15 });
-    tl.from(".hero-content h1", { y: 50, opacity: 0, duration: 0.9 })
-      .from(".hero-content p", { y: 30, opacity: 0, duration: 0.6 }, "-=0.5")
-      .from(".search-box", { y: 25, opacity: 0, scale: 0.97, duration: 0.6 }, "-=0.35")
-      .from(".search-feedback", { opacity: 0, duration: 0.3 }, "-=0.2")
-      .from(".exam-logo", { y: 20, opacity: 0, scale: 0.9, stagger: 0.07, duration: 0.5 }, "-=0.3");
+    const tl = gsap.timeline({ delay: 0.1 });
+    tl.from(".hero-content h1", { y: 50, autoAlpha: 0, duration: 0.9 })
+      .from(".hero-content p", { y: 30, autoAlpha: 0, duration: 0.6 }, "-=0.5")
+      .from(".search-box", { y: 25, autoAlpha: 0, scale: 0.97, duration: 0.6 }, "-=0.35")
+      .from(".search-feedback", { autoAlpha: 0, duration: 0.3 }, "-=0.2")
+      .from(".exam-logo", { y: 20, autoAlpha: 0, scale: 0.9, stagger: 0.07, duration: 0.5 }, "-=0.3");
 
     gsap.from(".hero-illustration", {
       y: 40,
-      opacity: 0,
+      autoAlpha: 0,
       duration: 1.2,
       delay: 0.3,
       stagger: 0.15,
@@ -38,7 +43,7 @@ if (!prefersReduced) {
 
     gsap.from(".hero-shape", {
       scale: 0,
-      opacity: 0,
+      autoAlpha: 0,
       duration: 1,
       delay: 0.5,
       stagger: 0.08,
@@ -49,10 +54,13 @@ if (!prefersReduced) {
   /* ── Sub-page heroes (concept, exam, workbook, global) ── */
   const subHero = document.querySelector(".concept-hero, .exam-hero, .workbook-hero, .global-hero");
   if (subHero) {
-    const tl = gsap.timeline();
-    tl.from(subHero, { opacity: 0, duration: 0.5 })
-      .from(subHero.querySelector("h1"), { y: 40, opacity: 0, duration: 0.7 }, "-=0.2")
-      .from(subHero.querySelector("p"), { y: 25, opacity: 0, duration: 0.5 }, "-=0.35");
+    const subHeroBits = subHero.querySelectorAll("h1, p");
+    gsap.from(subHeroBits, {
+      y: 30,
+      autoAlpha: 0,
+      duration: 0.7,
+      stagger: 0.12
+    });
   }
 
   /* ── Section headings ── */
@@ -129,7 +137,6 @@ if (!prefersReduced) {
         scrub: 1.5
       },
       y: -80,
-      rotation: 15,
       ease: "none"
     });
   });
@@ -300,7 +307,7 @@ if (!prefersReduced) {
   /* ── Detail pages ── */
   var detailTitle = document.querySelector(".detail-title-row");
   if (detailTitle) {
-    gsap.from(detailTitle, { y: 35, opacity: 0, duration: 0.7, delay: 0.1 });
+    gsap.from(detailTitle, { y: 35, autoAlpha: 0, duration: 0.7, delay: 0.1 });
   }
 
   gsap.utils.toArray(".detail-summary-grid article").forEach(function(card, i) {
@@ -349,7 +356,7 @@ if (!prefersReduced) {
   /* ── Guide detail hero ── */
   var guideHero = document.querySelector(".guide-detail-hero, .book-detail-hero");
   if (guideHero) {
-    gsap.from(guideHero, { y: 30, opacity: 0, duration: 0.7, delay: 0.1 });
+    gsap.from(guideHero, { y: 30, autoAlpha: 0, duration: 0.7, delay: 0.1 });
   }
 
   /* ── Chapter list (detail pages) ── */

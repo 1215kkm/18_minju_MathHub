@@ -52,6 +52,25 @@ button {
   border-radius: 4px;
 }
 
+/* FOUC guard: hide on-load animated elements before GSAP runs so they
+   don't flash visible then re-animate. Only while motion is allowed and
+   .anim-ready (set by JS, or a failsafe timer) has not yet been added. */
+@media (prefers-reduced-motion: no-preference) {
+  html.js:not(.anim-ready) .site-header,
+  html.js:not(.anim-ready) .hero-content > *,
+  html.js:not(.anim-ready) .hero-illustration,
+  html.js:not(.anim-ready) .hero-shape,
+  html.js:not(.anim-ready) .concept-hero,
+  html.js:not(.anim-ready) .exam-hero,
+  html.js:not(.anim-ready) .workbook-hero,
+  html.js:not(.anim-ready) .global-hero,
+  html.js:not(.anim-ready) .detail-title-row,
+  html.js:not(.anim-ready) .guide-detail-hero,
+  html.js:not(.anim-ready) .book-detail-hero {
+    visibility: hidden;
+  }
+}
+
 [hidden] {
   display: none !important;
 }
