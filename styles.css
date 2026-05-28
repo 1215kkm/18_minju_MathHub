@@ -750,6 +750,7 @@ button {
 
 .feature-row img {
   width: 100%;
+  height: auto;
   border-radius: 24px;
   filter: drop-shadow(0 22px 26px rgba(39, 57, 86, 0.22));
   transition: transform 260ms ease, filter 260ms ease;
