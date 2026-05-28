@@ -1295,11 +1295,41 @@ button {
   padding: 24px;
   background: #f8fbff;
   border: 1px solid #dfe7f4;
-  border-radius: 8px;
+  border-radius: 10px;
   color: #667085;
   font-size: 17px;
   font-weight: 700;
   text-align: center;
+}
+
+.preparing-state {
+  margin: 48px 0;
+  padding: 56px 24px;
+  background: #f8fbff;
+  border: 1px solid #dfe7f4;
+  border-radius: 14px;
+  text-align: center;
+}
+
+.preparing-icon {
+  font-size: 44px;
+  line-height: 1;
+  margin-bottom: 18px;
+}
+
+.preparing-state strong {
+  display: block;
+  color: var(--ink);
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.preparing-state p {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.6;
 }
 
 .book-item.is-extra-hidden {
@@ -3892,6 +3922,23 @@ button.is-clicked {
   .scroll-top {
     right: 22px;
     bottom: 118px;
+  }
+
+  .preparing-state {
+    margin: 30px 0;
+    padding: 40px 18px;
+  }
+
+  .preparing-icon {
+    font-size: 36px;
+  }
+
+  .preparing-state strong {
+    font-size: 17px;
+  }
+
+  .preparing-state p {
+    font-size: 13px;
   }
 
   .exam-content,

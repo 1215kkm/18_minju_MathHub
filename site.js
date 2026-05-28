@@ -71,9 +71,24 @@ const updateExamHeading = (filter) => {
   const heading = examPage?.querySelector(".exam-results > h2");
   if (!heading) return;
 
-  const year = filter.querySelector(".year-options .filter-chip.active")?.textContent.trim() || "2026";
-  const grade = filter.querySelector(".radio-options input:checked")?.parentElement.textContent.trim() || "고 3";
-  heading.textContent = `${year} ${grade}`;
+  const year = filter.querySelector(".year-options .filter-chip.active")?.textContent.trim() || "";
+  const grade = filter.querySelector(".radio-options input:checked")?.parentElement.textContent.trim() || "";
+  const parts = [year, grade].filter(Boolean);
+  heading.textContent = parts.length ? parts.join(" ") : "기출문제 검색 결과";
+};
+
+const getOrCreatePreparing = (container) => {
+  let el = container.querySelector(".preparing-state");
+  if (!el) {
+    el = document.createElement("div");
+    el.className = "preparing-state";
+    el.innerHTML =
+      '<div class="preparing-icon">📋</div>' +
+      '<strong>자료 준비중입니다</strong>' +
+      '<p>선택하신 조건의 기출문제는 현재 준비중이에요.<br>빠른 시일 내에 업데이트하겠습니다.</p>';
+    container.appendChild(el);
+  }
+  return el;
 };
 
 const applyExamResults = (filter) => {
@@ -83,20 +98,26 @@ const applyExamResults = (filter) => {
 
   const query = normalizeText(getSearchValue(filter));
   const activeMonths = Array.from(filter.querySelectorAll(".month-options .filter-chip.active")).map((chip) => normalizeText(chip.textContent));
-  const visibleMonths = activeMonths.length ? activeMonths : [];
+  const activeType = filter.querySelector(".filter-row:nth-child(2) .filter-chip.active")?.textContent.trim() || "";
+  const activeYear = filter.querySelector(".year-options .filter-chip.active")?.textContent.trim() || "";
   let visibleCount = 0;
 
   results.querySelectorAll(".exam-result-group").forEach((group) => {
     const text = normalizeText(group.textContent);
-    const monthMatch = !visibleMonths.length || visibleMonths.some((month) => text.includes(month));
+    const monthMatch = !activeMonths.length || activeMonths.some((month) => text.includes(month));
+    const typeMatch = !activeType || text.includes(normalizeText(activeType));
+    const yearMatch = !activeYear || text.includes(normalizeText(activeYear));
     const queryMatch = !query || text.includes(query);
-    const visible = monthMatch && queryMatch;
+    const visible = monthMatch && typeMatch && yearMatch && queryMatch;
     group.hidden = !visible;
     visibleCount += visible ? 1 : 0;
   });
 
-  const empty = getOrCreateEmptyState(results, "검색 조건에 맞는 기출 자료가 없습니다.");
-  empty.hidden = visibleCount > 0;
+  const empty = getOrCreateEmptyState(results, "");
+  empty.hidden = true;
+
+  const preparing = getOrCreatePreparing(results);
+  preparing.hidden = visibleCount > 0;
 };
 
 const applyWorkbookResults = (filter) => {
@@ -142,6 +163,7 @@ const setChipActive = (chip) => {
   const filter = chip.closest(".exam-filter");
   const isMulti = isMultiSelectRow(chip);
   const isAll = chip.textContent.trim() === "전체";
+  const isExamFilter = !filter?.classList.contains("workbook-filter");
 
   if (isMulti) {
     if (isAll) {
@@ -150,10 +172,13 @@ const setChipActive = (chip) => {
     } else {
       row.querySelector(".filter-chip")?.textContent.trim() === "전체" && row.querySelector(".filter-chip")?.classList.remove("active");
       chip.classList.toggle("active");
-      const hasActive = row.querySelector(".filter-chip.active");
-      if (!hasActive) {
-        row.querySelector(".filter-chip")?.classList.add("active");
-      }
+    }
+  } else if (isExamFilter) {
+    if (chip.classList.contains("active")) {
+      chip.classList.remove("active");
+    } else {
+      row.querySelectorAll(".filter-chip").forEach((item) => item.classList.remove("active"));
+      chip.classList.add("active");
     }
   } else {
     row.querySelectorAll(".filter-chip").forEach((item) => item.classList.remove("active"));
@@ -170,14 +195,37 @@ document.querySelectorAll(".exam-filter").forEach((filter) => {
   const initialState = filter.innerHTML;
   const actions = filter.nextElementSibling;
 
+  const bindRadioTracking = () => {
+    filter.querySelectorAll('input[type="radio"]').forEach((radio) => {
+      radio.addEventListener("mousedown", () => {
+        radio.dataset.wasChecked = radio.checked ? "true" : "false";
+      });
+    });
+  };
+
   filter.addEventListener("click", (event) => {
     const chip = event.target.closest(".filter-chip");
     if (chip) {
       setChipActive(chip);
+      return;
+    }
+
+    const radio = event.target.closest('input[type="radio"]');
+    if (radio && radio.dataset.wasChecked === "true") {
+      radio.checked = false;
+      radio.dataset.wasChecked = "false";
+      updateExamHeading(filter);
+      applyExamResults(filter);
+      return;
     }
   });
 
+  bindRadioTracking();
+
   filter.addEventListener("change", () => {
+    filter.querySelectorAll('input[type="radio"]').forEach((r) => {
+      r.dataset.wasChecked = r.checked ? "true" : "false";
+    });
     updateWorkbookTags(filter);
     updateExamHeading(filter);
     applyExamResults(filter);
@@ -207,6 +255,7 @@ document.querySelectorAll(".exam-filter").forEach((filter) => {
     filter.innerHTML = initialState;
     filter.classList.remove("is-collapsed", "searched");
     filter.style.display = "";
+    bindRadioTracking();
     updateWorkbookTags(filter);
     updateExamHeading(filter);
     applyExamResults(filter);
