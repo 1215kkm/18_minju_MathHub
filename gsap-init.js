@@ -81,7 +81,7 @@ if (!prefersReduced) {
       y: 60,
       opacity: 0,
       duration: 0.7,
-      delay: i * 0.1
+      delay: Math.min(i, 3) * 0.08
     });
   });
 
@@ -149,7 +149,7 @@ if (!prefersReduced) {
       opacity: 0,
       scale: 0.95,
       duration: 0.6,
-      delay: i * 0.08
+      delay: Math.min(i, 3) * 0.07
     });
   });
 
@@ -164,7 +164,7 @@ if (!prefersReduced) {
       y: 35,
       opacity: 0,
       duration: 0.5,
-      delay: i * 0.07
+      delay: Math.min(i, 3) * 0.06
     });
   });
 
@@ -194,7 +194,7 @@ if (!prefersReduced) {
       x: -30,
       opacity: 0,
       duration: 0.5,
-      delay: i * 0.06
+      delay: Math.min(i, 4) * 0.05
     });
   });
 
@@ -222,8 +222,7 @@ if (!prefersReduced) {
       },
       x: -40,
       opacity: 0,
-      duration: 0.5,
-      delay: i * 0.06
+      duration: 0.5
     });
   });
 
@@ -237,8 +236,7 @@ if (!prefersReduced) {
       },
       x: -25,
       opacity: 0,
-      duration: 0.4,
-      delay: i * 0.05
+      duration: 0.4
     });
   });
 
@@ -281,8 +279,7 @@ if (!prefersReduced) {
       },
       y: 30,
       opacity: 0,
-      duration: 0.5,
-      delay: i * 0.05
+      duration: 0.5
     });
   });
 
@@ -296,8 +293,7 @@ if (!prefersReduced) {
       },
       y: 30,
       opacity: 0,
-      duration: 0.5,
-      delay: i * 0.06
+      duration: 0.5
     });
   });
 
@@ -318,7 +314,7 @@ if (!prefersReduced) {
       opacity: 0,
       scale: 0.96,
       duration: 0.5,
-      delay: i * 0.08
+      delay: Math.min(i, 3) * 0.07
     });
   });
 
@@ -366,8 +362,7 @@ if (!prefersReduced) {
       },
       y: 20,
       opacity: 0,
-      duration: 0.4,
-      delay: i * 0.05
+      duration: 0.4
     });
   });
 
