@@ -2834,9 +2834,9 @@ button.is-clicked {
 
 .info-hero {
   display: grid;
-  min-height: 210px;
+  min-height: 266px;
   place-items: center;
-  padding: 48px 24px 52px;
+  padding: 42px 24px 46px;
   background: linear-gradient(112deg, #27bdd6 0%, #2a426f 100%);
   color: #fff;
   text-align: center;
@@ -3029,8 +3029,9 @@ button.is-clicked {
 
 .search-hero {
   display: grid;
+  min-height: 266px;
   place-items: center;
-  padding: 56px 24px 60px;
+  padding: 42px 24px 46px;
   background: linear-gradient(112deg, #27bdd6 0%, #2a426f 100%);
   color: #fff;
   text-align: center;
@@ -4738,8 +4739,8 @@ button.is-clicked {
   }
 
   .info-hero {
-    min-height: 120px;
-    padding: 30px 18px;
+    min-height: 96px;
+    padding: 20px 16px 22px;
   }
 
   .global-hero h1,
@@ -4778,7 +4779,8 @@ button.is-clicked {
   }
 
   .search-hero {
-    padding: 36px 18px 40px;
+    min-height: 96px;
+    padding: 24px 18px 26px;
   }
 
   .search-hero h1 {
