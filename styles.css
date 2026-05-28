@@ -184,7 +184,7 @@ button {
   padding: 0 9px 0 21px;
   background: #fff;
   border: 1px solid #e3ebf7;
-  border-radius: 7px;
+  border-radius: 10px;
   box-shadow: 0 12px 28px rgba(33, 72, 122, 0.12);
   transition: box-shadow 180ms ease, transform 180ms ease, border-color 180ms ease;
 }
@@ -797,7 +797,7 @@ button {
   padding: 28px 25px 22px;
   background: #fff;
   border: 1px solid rgba(216, 228, 244, 0.7);
-  border-radius: 7px;
+  border-radius: 10px;
   box-shadow: 0 10px 22px rgba(37, 55, 90, 0.14);
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
 }
@@ -1282,8 +1282,8 @@ button {
   margin-top: 23px;
   place-items: center;
   background: #fff;
-  border: 1px solid #e2e2e2;
-  border-radius: 5px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
   color: #9b9b9b;
   font-size: 15px;
   font-weight: 700;
@@ -1356,6 +1356,7 @@ button.is-clicked {
   color: #111827;
   font-size: 23px;
   font-weight: 500;
+  line-height: 1.45;
 }
 
 .concept-layout {
@@ -1394,7 +1395,7 @@ button.is-clicked {
   padding: 0 18px;
   background: #edf4ff;
   border: 1px solid #cfd9e8;
-  border-radius: 7px;
+  border-radius: 10px;
   color: #333;
   font-size: 21px;
   font-weight: 700;
@@ -1415,8 +1416,8 @@ button.is-clicked {
   min-height: 426px;
   padding: 24px 18px 18px;
   background: #fff;
-  border: 1px solid #d5d5d5;
-  border-radius: 7px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
 }
 
 .detail-panel {
@@ -1544,7 +1545,7 @@ button.is-clicked {
 .before-card {
   padding: 28px 24px 26px;
   background: #edf4fe;
-  border-radius: 6px;
+  border-radius: 10px;
 }
 
 .before-title {
@@ -1572,8 +1573,8 @@ button.is-clicked {
   min-height: 62px;
   padding: 0 18px;
   background: #fff;
-  border: 1px solid #d2d2d2;
-  border-radius: 7px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
   color: #8a8a8a;
   font-size: 18px;
   line-height: 1.5;
@@ -1623,8 +1624,8 @@ button.is-clicked {
   width: 247px;
   height: 42px;
   padding: 0 13px;
-  border: 1px solid #d0d0d0;
-  border-radius: 7px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
 }
 
 .unit-search input {
@@ -1668,8 +1669,8 @@ button.is-clicked {
   min-height: 92px;
   padding: 20px 46px 20px 68px;
   background: #fff;
-  border: 1px solid #d8d8d8;
-  border-radius: 7px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
   box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
   transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
 }
@@ -1789,8 +1790,8 @@ button.is-clicked {
   margin-top: 22px;
   padding: 26px 30px;
   background: #fff;
-  border: 1px solid #d9d9d9;
-  border-radius: 7px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
 }
 
 .example-box strong,
@@ -1925,6 +1926,7 @@ button.is-clicked {
   color: #202020;
   font-size: 23px;
   font-weight: 500;
+  line-height: 1.45;
 }
 
 .exam-content {
@@ -1942,8 +1944,8 @@ button.is-clicked {
 
 .exam-filter {
   overflow: hidden;
-  border: 1px solid #b8b8b8;
-  border-radius: 6px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
 }
 
 .exam-filter.is-collapsed .filter-row:not(.search-row) {
@@ -2041,8 +2043,8 @@ button.is-clicked {
   width: 520px;
   height: 42px;
   padding: 0 13px;
-  border: 1px solid #d2d2d2;
-  border-radius: 5px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
 }
 
 .exam-search span {
@@ -2078,7 +2080,7 @@ button.is-clicked {
   width: 74px;
   height: 42px;
   background: #2b83ef;
-  border-radius: 5px;
+  border-radius: 8px;
   color: #fff;
   font-size: 16px;
   font-weight: 700;
@@ -2183,8 +2185,8 @@ button.is-clicked {
   min-height: 82px;
   padding: 16px 18px;
   background: #fff;
-  border: 1px solid #dedede;
-  border-radius: 7px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
 }
 
 .download-icon {
@@ -2192,7 +2194,7 @@ button.is-clicked {
   width: 39px;
   height: 39px;
   place-items: center;
-  border-radius: 5px;
+  border-radius: 8px;
   color: #fff;
   font-size: 20px;
 }
@@ -2223,8 +2225,8 @@ button.is-clicked {
   height: 42px;
   padding: 0 22px;
   background: #fff;
-  border: 1px solid #d9d9d9;
-  border-radius: 4px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
   color: #222;
   font-size: 16px;
   font-weight: 800;
@@ -2246,8 +2248,8 @@ button.is-clicked {
   overflow: hidden;
   min-height: 282px;
   background: #fff;
-  border: 1px solid #d3d3d3;
-  border-radius: 7px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
 }
 
 .score-panel h4,
@@ -2368,9 +2370,9 @@ button.is-clicked {
 
 .global-hero {
   display: grid;
-  min-height: 184px;
+  min-height: 210px;
   place-items: center;
-  padding: 38px 24px 42px;
+  padding: 48px 24px 52px;
   background: linear-gradient(112deg, #27bdd6 0%, #2a426f 100%);
   color: #fff;
   text-align: center;
@@ -2379,18 +2381,18 @@ button.is-clicked {
 .global-hero h1 {
   margin: 0;
   color: #fff;
-  font-size: 38px;
+  font-size: 42px;
   font-weight: 900;
   letter-spacing: 0;
-  line-height: 1.15;
+  line-height: 1.25;
 }
 
 .global-hero p {
-  margin: 24px 0 0;
+  margin: 20px 0 0;
   color: rgba(255, 255, 255, 0.9);
-  font-size: 19px;
+  font-size: 20px;
   font-weight: 500;
-  line-height: 1.35;
+  line-height: 1.45;
 }
 
 .global-content {
@@ -2402,8 +2404,8 @@ button.is-clicked {
 .testbook-section h2,
 .guide-section h2 {
   margin: 0 0 32px;
-  color: #2b2b2b;
-  font-size: 22px;
+  color: var(--ink);
+  font-size: 25px;
   font-weight: 900;
   letter-spacing: 0;
 }
@@ -2411,19 +2413,19 @@ button.is-clicked {
 .practice-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 18px 24px;
+  gap: 22px;
 }
 
 .practice-card {
   display: flex;
-  height: 150px;
+  min-height: 150px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 18px 16px;
+  padding: 24px 22px;
   background: #fff;
-  border: 1px solid #b5b5b5;
-  border-radius: 4px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
   color: #1f1f1f;
   text-align: center;
   transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
@@ -2446,10 +2448,10 @@ button.is-clicked {
 
 .practice-card p {
   margin: 0;
-  color: #202020;
+  color: #4b596f;
   font-size: 14px;
-  font-weight: 500;
-  line-height: 1.18;
+  font-weight: 600;
+  line-height: 1.4;
 }
 
 .sat-resource {
@@ -2539,13 +2541,13 @@ button.is-clicked {
 
 .testbook-tabs button {
   display: flex;
-  height: 42px;
+  height: 44px;
   align-items: center;
   justify-content: flex-start;
   padding: 0 20px;
   background: #fff;
-  border: 1px solid #dedede;
-  border-radius: 5px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
   color: #333;
   font-size: 18px;
   font-weight: 500;
@@ -2585,11 +2587,11 @@ button.is-clicked {
 
 .chapter-card {
   position: relative;
-  min-height: 110px;
-  padding: 15px 16px 16px;
+  min-height: 120px;
+  padding: 22px 24px;
   background: #fff;
-  border: 1px solid #dedede;
-  border-radius: 5px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
   color: #2a2a2a;
   transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease, background 180ms ease;
 }
@@ -2597,19 +2599,19 @@ button.is-clicked {
 .chapter-card.active,
 .chapter-card:hover {
   background: #f1f7ff;
-  border-color: #d9e4f4;
-  box-shadow: 0 8px 18px rgba(29, 62, 105, 0.09);
-  transform: translateY(-2px);
+  border-color: #a9c7f8;
+  box-shadow: 0 12px 24px rgba(29, 62, 105, 0.1);
+  transform: translateY(-3px);
 }
 
 .chapter-card span {
   display: inline-grid;
-  min-width: 23px;
-  height: 22px;
+  min-width: 26px;
+  height: 24px;
   place-items: center;
-  padding: 0 6px;
+  padding: 0 8px;
   background: #2ab9e4;
-  border-radius: 3px;
+  border-radius: 6px;
   color: #fff;
   font-size: 12px;
   font-weight: 900;
@@ -2625,19 +2627,19 @@ button.is-clicked {
 }
 
 .chapter-card h3 {
-  margin: 14px 0 10px;
+  margin: 12px 0 10px;
   color: #2d2d2d;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 900;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 
 .chapter-card p {
   margin: 0;
   color: #777;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 500;
-  line-height: 1.26;
+  line-height: 1.4;
 }
 
 .guide-section {
@@ -2659,8 +2661,8 @@ button.is-clicked {
   position: relative;
   overflow: visible;
   background: #fff;
-  border: 1px solid #dedede;
-  border-radius: 5px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
   transition: box-shadow 180ms ease, transform 180ms ease, border-color 180ms ease;
 }
 
@@ -2679,7 +2681,7 @@ button.is-clicked {
   align-items: center;
   padding: 0 15px;
   background: #eeeeee;
-  border-radius: 4px;
+  border-radius: 6px;
   color: #333;
   font-size: 12px;
   font-weight: 900;
@@ -2689,12 +2691,12 @@ button.is-clicked {
   display: block;
   width: 100%;
   height: 216px;
-  border-radius: 5px 5px 0 0;
+  border-radius: 10px 10px 0 0;
   object-fit: cover;
 }
 
 .guide-card div {
-  padding: 17px 18px 19px;
+  padding: 22px 24px 24px;
 }
 
 .guide-card h3 {
@@ -2702,15 +2704,15 @@ button.is-clicked {
   color: #2a2a2a;
   font-size: 20px;
   font-weight: 900;
-  line-height: 1.12;
+  line-height: 1.3;
 }
 
 .guide-card p {
   margin: 0;
-  color: #303030;
-  font-size: 13px;
+  color: #4b596f;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 1.28;
+  line-height: 1.45;
 }
 
 .guide-link {
@@ -2818,7 +2820,7 @@ button.is-clicked {
   padding: 24px 22px;
   background: #f4f8ff;
   border: 1px solid #dbe7f8;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 .detail-summary-grid span {
@@ -2854,8 +2856,8 @@ button.is-clicked {
 .detail-panel-card {
   padding: 30px;
   background: #fff;
-  border: 1px solid #dfe5ee;
-  border-radius: 8px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
   box-shadow: 0 12px 26px rgba(31, 64, 116, 0.06);
 }
 
@@ -2897,7 +2899,7 @@ button.is-clicked {
   padding: 18px;
   background: #f8fbff;
   border: 1px solid #e1eaf6;
-  border-radius: 7px;
+  border-radius: 10px;
 }
 
 .detail-step-list strong {
@@ -3036,7 +3038,7 @@ button.is-clicked {
   padding: 18px;
   background: #f8fbff;
   border: 1px solid #e1eaf6;
-  border-radius: 7px;
+  border-radius: 10px;
 }
 
 .chapter-list span {
@@ -3046,7 +3048,7 @@ button.is-clicked {
   height: 34px;
   place-items: center;
   background: #2b83ef;
-  border-radius: 7px;
+  border-radius: 8px;
   color: #fff;
   font-weight: 900;
 }
@@ -3493,7 +3495,7 @@ button.is-clicked {
   .exam-logo {
     width: 45px;
     height: 39px;
-    border-radius: 4px;
+    border-radius: 6px;
   }
 
   .curriculum-section {
@@ -3648,7 +3650,7 @@ button.is-clicked {
     min-width: 0;
     min-height: 39px;
     padding: 0 8px;
-    border-radius: 7px;
+    border-radius: 8px;
     font-size: 15px;
     font-weight: 800;
     white-space: nowrap;
@@ -3866,7 +3868,7 @@ button.is-clicked {
   .example-box,
   .practice-box {
     padding: 16px;
-    border-radius: 4px;
+    border-radius: 8px;
   }
 
   .example-box strong,
@@ -3908,7 +3910,7 @@ button.is-clicked {
   .exam-filter {
     width: 100%;
     overflow: hidden;
-    border-radius: 7px;
+    border-radius: 10px;
   }
 
   .filter-row,
@@ -4129,17 +4131,17 @@ button.is-clicked {
   }
 
   .global-hero {
-    min-height: 102px;
-    padding: 24px 14px;
+    min-height: 120px;
+    padding: 30px 18px;
   }
 
   .global-hero h1 {
-    font-size: 22px;
+    font-size: 24px;
   }
 
   .global-hero p {
-    margin-top: 11px;
-    font-size: 10px;
+    margin-top: 12px;
+    font-size: 12px;
   }
 
   .global-content {
@@ -4150,7 +4152,7 @@ button.is-clicked {
   .practice-section h2,
   .testbook-section h2,
   .guide-section h2 {
-    margin-bottom: 15px;
+    margin-bottom: 18px;
     font-size: 18px;
   }
 
@@ -4160,12 +4162,12 @@ button.is-clicked {
   }
 
   .practice-card {
-    height: 110px;
-    padding: 13px 8px;
+    min-height: 110px;
+    padding: 16px 12px;
   }
 
   .practice-card p {
-    font-size: 10px;
+    font-size: 11px;
   }
 
   .ap-resource {
@@ -4199,12 +4201,12 @@ button.is-clicked {
   }
 
   .chapter-card {
-    min-height: 125px;
-    padding: 18px 18px;
+    min-height: 110px;
+    padding: 20px 20px;
   }
 
   .chapter-card h3 {
-    font-size: 17px;
+    font-size: 16px;
   }
 
   .chapter-card p {
@@ -4226,6 +4228,6 @@ button.is-clicked {
   }
 
   .guide-card p {
-    font-size: 11px;
+    font-size: 12px;
   }
 }
