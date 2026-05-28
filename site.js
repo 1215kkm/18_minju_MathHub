@@ -98,15 +98,18 @@ const applyExamResults = (filter) => {
 
   const query = normalizeText(getSearchValue(filter));
   const activeMonths = Array.from(filter.querySelectorAll(".month-options .filter-chip.active")).map((chip) => normalizeText(chip.textContent));
-  const activeType = filter.querySelector(".filter-row:nth-child(2) .filter-chip.active")?.textContent.trim() || "";
-  const activeYear = filter.querySelector(".year-options .filter-chip.active")?.textContent.trim() || "";
+  const activeType = normalizeText(filter.querySelector(".filter-row:nth-child(2) .filter-chip.active")?.textContent || "");
+  const activeYear = normalizeText(filter.querySelector(".year-options .filter-chip.active")?.textContent || "");
   let visibleCount = 0;
 
   results.querySelectorAll(".exam-result-group").forEach((group) => {
     const text = normalizeText(group.textContent);
-    const monthMatch = !activeMonths.length || activeMonths.some((month) => text.includes(month));
-    const typeMatch = !activeType || text.includes(normalizeText(activeType));
-    const yearMatch = !activeYear || text.includes(normalizeText(activeYear));
+    const groupMonth = normalizeText(group.dataset.month || "");
+    const groupType = normalizeText(group.dataset.type || "");
+    const groupYear = normalizeText(group.dataset.year || "");
+    const monthMatch = !activeMonths.length || activeMonths.some((month) => groupMonth === month || text.includes(month));
+    const typeMatch = !activeType || groupType === activeType;
+    const yearMatch = !activeYear || groupYear === activeYear;
     const queryMatch = !query || text.includes(query);
     const visible = monthMatch && typeMatch && yearMatch && queryMatch;
     group.hidden = !visible;
