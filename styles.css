@@ -2408,6 +2408,7 @@ button.is-clicked {
 }
 
 .global-hero h1 {
+  max-width: 100%;
   margin: 0;
   color: #fff;
   font-size: 42px;
@@ -2417,6 +2418,7 @@ button.is-clicked {
 }
 
 .global-hero p {
+  max-width: 100%;
   margin: 20px 0 0;
   color: rgba(255, 255, 255, 0.9);
   font-size: 20px;
@@ -2553,13 +2555,16 @@ button.is-clicked {
 }
 
 .text-resource {
-  flex-direction: column;
-  gap: 3px;
+  gap: 5px;
   color: #1f3a5f;
-  font-size: 23px;
+  font-size: 27px;
   font-weight: 900;
   letter-spacing: -0.4px;
   line-height: 1.05;
+}
+
+.text-resource b {
+  font-weight: 900;
 }
 
 .text-resource span {
@@ -2570,7 +2575,7 @@ button.is-clicked {
   color: #88bd43;
   font-size: 12px;
   font-weight: 800;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.6px;
 }
 
 .testbook-section {
@@ -2807,6 +2812,7 @@ button.is-clicked {
 }
 
 .info-hero h1 {
+  max-width: 100%;
   margin: 0;
   color: #fff;
   font-size: 42px;
@@ -2816,6 +2822,7 @@ button.is-clicked {
 }
 
 .info-hero p {
+  max-width: 100%;
   margin: 20px 0 0;
   color: rgba(255, 255, 255, 0.9);
   font-size: 20px;
