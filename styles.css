@@ -1008,12 +1008,16 @@ button {
   }
 
   .hero {
-    min-height: 620px;
+    min-height: 540px;
+  }
+
+  .hero-illustration {
+    display: none;
   }
 
   .hero-content {
     width: min(100% - 40px, 350px);
-    padding-top: 90px;
+    padding-top: 84px;
   }
 
   .hero h1 {
