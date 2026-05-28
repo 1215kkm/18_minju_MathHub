@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>소개 | MathHub</title>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+    />
+    <link rel="stylesheet" href="./styles.css?v=hero-polish-1" />
+  </head>
+  <body>
+    <header class="site-header sub-header">
+      <a class="logo" href="./index.html" aria-label="MathHub home">Math<span>Hub</span></a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="./concepts.html">개념 완성</a>
+        <a href="./past-exams.html">기출 문제</a>
+        <a href="./workbooks.html">문제집 &amp; 해설</a>
+        <a href="./global.html">국가별 과정</a>
+      </nav>
+      <button class="menu-button" type="button" aria-label="메뉴 열기" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="mobile-menu" aria-hidden="true">
+        <a href="./concepts.html">개념완성</a>
+        <a href="./past-exams.html">기출 문제</a>
+        <a href="./workbooks.html">문제집&amp;해설</a>
+        <button class="mobile-country-toggle" type="button">국가별 과정 <span>⌄</span></button>
+        <div class="mobile-country-options">
+          <a href="./global.html">🇺🇸 USA</a>
+          <a href="./global-uk.html">🇬🇧 United Kingdom</a>
+          <a href="./global-canada.html">🇨🇦 Canada</a>
+          <a href="./global-ib.html">🌐 IB Mathematics</a>
+        </div>
+        <button class="mobile-close" type="button" aria-label="메뉴 닫기">×</button>
+      </div>
+    </header>
+
+    <main class="info-page">
+      <section class="info-hero">
+        <h1>MathHub 소개</h1>
+        <p>전 세계 수학 기출문제와 교재를 한 곳에서 무료로</p>
+      </section>
+
+      <section class="info-content">
+        <article class="info-article">
+          <p class="info-lead">
+            MathHub은 흩어져 있는 전 세계 수학 자료를 누구나 쉽게 찾고 학습할 수 있도록 모으는
+            오픈 수학 자료 라이브러리입니다. 시험과 국가가 달라도 학습의 출발선은 같아야 한다고 믿습니다.
+          </p>
+
+          <h2>우리가 하는 일</h2>
+          <p>
+            SAT·AP·A-Level·IB·수능 등 주요 시험의 공식 기출문제와 해설, 인터랙티브 교재,
+            국가별 커리큘럼 자료를 한 플랫폼에 정리합니다. 자료를 찾는 데 드는 시간을 줄여
+            학생과 선생님이 학습 그 자체에 집중할 수 있도록 돕습니다.
+          </p>
+        </article>
+
+        <article class="info-article">
+          <h2>우리가 추구하는 가치</h2>
+          <div class="info-card-grid">
+            <div class="info-card">
+              <strong>접근성</strong>
+              <p>핵심 자료는 누구에게나 무료로 제공합니다. 학습 기회는 경제적 여건과 무관해야 합니다.</p>
+            </div>
+            <div class="info-card">
+              <strong>정확성</strong>
+              <p>공식 출처의 기출문제와 검수된 해설만을 정리해 신뢰할 수 있는 자료를 제공합니다.</p>
+            </div>
+            <div class="info-card">
+              <strong>연결성</strong>
+              <p>개념 → 기출 → 풀이로 이어지는 학습 흐름을 한 곳에서 자연스럽게 연결합니다.</p>
+            </div>
+            <div class="info-card">
+              <strong>확장성</strong>
+              <p>더 많은 국가와 시험으로 자료를 꾸준히 넓혀 전 세계 학습자를 연결합니다.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="info-article">
+          <h2>함께해요</h2>
+          <p>
+            자료 제안, 오류 제보, 협업 문의는 언제든 환영합니다.
+            <a href="./contact.html">문의 페이지</a>를 통해 의견을 보내주세요.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer sub-footer">
+      <div class="footer-inner">
+        <a class="footer-logo" href="./index.html">MathHub</a>
+        <nav aria-label="Footer navigation">
+          <a href="./about.html">About Us</a>
+          <a href="./contact.html">Contact</a>
+          <a href="./terms.html">Terms of Service</a>
+          <a href="./privacy.html">Privacy Policy</a>
+          <a href="./contact.html">Support Us</a>
+        </nav>
+        <div class="footer-line"></div>
+        <p>© 2026 MathHub. All rights reserved.</p>
+        <div class="language-list" aria-label="Languages">
+          <span>🇰🇷</span><span>🇺🇸</span><span>🇬🇧</span><span>🇨🇦</span>
+        </div>
+      </div>
+    </footer>
+    <script src="./site.js?v=interactions-1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="./gsap-init.js"></script>
+  </body>
+</html>

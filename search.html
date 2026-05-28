@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>검색 | MathHub</title>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+    />
+    <link rel="stylesheet" href="./styles.css?v=hero-polish-1" />
+  </head>
+  <body>
+    <header class="site-header sub-header">
+      <a class="logo" href="./index.html" aria-label="MathHub home">Math<span>Hub</span></a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="./concepts.html">개념 완성</a>
+        <a href="./past-exams.html">기출 문제</a>
+        <a href="./workbooks.html">문제집 &amp; 해설</a>
+        <a href="./global.html">국가별 과정</a>
+      </nav>
+      <button class="menu-button" type="button" aria-label="메뉴 열기" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="mobile-menu" aria-hidden="true">
+        <a href="./concepts.html">개념완성</a>
+        <a href="./past-exams.html">기출 문제</a>
+        <a href="./workbooks.html">문제집&amp;해설</a>
+        <button class="mobile-country-toggle" type="button">국가별 과정 <span>⌄</span></button>
+        <div class="mobile-country-options">
+          <a href="./global.html">🇺🇸 USA</a>
+          <a href="./global-uk.html">🇬🇧 United Kingdom</a>
+          <a href="./global-canada.html">🇨🇦 Canada</a>
+          <a href="./global-ib.html">🌐 IB Mathematics</a>
+        </div>
+        <button class="mobile-close" type="button" aria-label="메뉴 닫기">×</button>
+      </div>
+    </header>
+
+    <main class="search-page">
+      <section class="search-hero">
+        <h1>무엇을 찾고 계신가요?</h1>
+        <form class="search-hero-form" data-search-page-form role="search">
+          <input type="search" name="q" placeholder="시험명, 개념, 교재를 검색해 보세요" aria-label="검색어" />
+          <button type="submit">검색</button>
+        </form>
+      </section>
+
+      <section class="search-content">
+        <p class="search-summary" data-search-summary></p>
+        <div data-search-results></div>
+      </section>
+    </main>
+
+    <footer class="site-footer sub-footer">
+      <div class="footer-inner">
+        <a class="footer-logo" href="./index.html">MathHub</a>
+        <nav aria-label="Footer navigation">
+          <a href="./about.html">About Us</a>
+          <a href="./contact.html">Contact</a>
+          <a href="./terms.html">Terms of Service</a>
+          <a href="./privacy.html">Privacy Policy</a>
+          <a href="./contact.html">Support Us</a>
+        </nav>
+        <div class="footer-line"></div>
+        <p>© 2026 MathHub. All rights reserved.</p>
+        <div class="language-list" aria-label="Languages">
+          <span>🇰🇷</span><span>🇺🇸</span><span>🇬🇧</span><span>🇨🇦</span>
+        </div>
+      </div>
+    </footer>
+    <script src="./site.js?v=interactions-1"></script>
+    <script src="./search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="./gsap-init.js"></script>
+  </body>
+</html>

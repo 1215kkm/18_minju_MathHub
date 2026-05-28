@@ -399,6 +399,153 @@ const chapterData = {
     ["4", "Differential Equations", "Slope fields and separable equations"],
     ["5", "Series", "Taylor series and convergence"],
     ["6", "FRQ Practice", "Scoring guidelines and released questions"]
+  ],
+
+  "Pure Mathematics": [
+    ["1", "Algebra & Functions", "Indices, surds, quadratics, polynomials"],
+    ["2", "Coordinate Geometry", "Straight lines, circles, parametric equations"],
+    ["3", "Sequences & Series", "Arithmetic, geometric, binomial expansion"],
+    ["4", "Trigonometry", "Identities, equations, radian measure"],
+    ["5", "Differentiation", "Rules, stationary points, applications"],
+    ["6", "Integration", "Definite integrals, areas, volumes"]
+  ],
+  "Statistics": [
+    ["1", "Data Presentation", "Histograms, box plots, measures of spread"],
+    ["2", "Probability", "Rules, conditional probability, tree diagrams"],
+    ["3", "Distributions", "Binomial and normal distributions"],
+    ["4", "Correlation", "Regression and product-moment correlation"],
+    ["5", "Sampling", "Sampling methods and bias"],
+    ["6", "Hypothesis Testing", "Significance tests and p-values"]
+  ],
+  "Mechanics": [
+    ["1", "Kinematics", "Displacement, velocity, acceleration graphs"],
+    ["2", "Forces & Newton's Laws", "Resultant forces and equilibrium"],
+    ["3", "Moments", "Turning effects and rigid bodies"],
+    ["4", "Projectiles", "Motion under gravity in two dimensions"],
+    ["5", "Friction", "Coefficient of friction and inclined planes"],
+    ["6", "Momentum", "Impulse and collisions"]
+  ],
+  "Further Pure": [
+    ["1", "Complex Numbers", "Argand diagrams, modulus-argument form"],
+    ["2", "Matrices", "Transformations and determinants"],
+    ["3", "Proof by Induction", "Inductive proofs of formulae"],
+    ["4", "Polar Coordinates", "Curves and areas in polar form"],
+    ["5", "Hyperbolic Functions", "Definitions and identities"],
+    ["6", "Differential Equations", "First and second order ODEs"]
+  ],
+  "Decision Maths": [
+    ["1", "Algorithms", "Sorting, searching, bin packing"],
+    ["2", "Graphs & Networks", "Minimum spanning trees, Dijkstra"],
+    ["3", "Route Inspection", "Chinese postman problem"],
+    ["4", "Critical Path", "Activity networks and scheduling"],
+    ["5", "Linear Programming", "Graphical and simplex methods"],
+    ["6", "Game Theory", "Pay-off matrices and strategies"]
+  ],
+  "GCSE Higher": [
+    ["1", "Number", "Fractions, percentages, standard form"],
+    ["2", "Algebra", "Expanding, factorising, simultaneous equations"],
+    ["3", "Ratio & Proportion", "Direct and inverse proportion"],
+    ["4", "Geometry", "Angles, circle theorems, transformations"],
+    ["5", "Trigonometry", "Pythagoras, SOHCAHTOA, sine/cosine rule"],
+    ["6", "Statistics", "Averages, cumulative frequency, probability"]
+  ],
+
+  "Functions": [
+    ["1", "Relations & Functions", "Function notation, domain, range, inverses"],
+    ["2", "Quadratic Functions", "Vertex form, factoring, the quadratic formula"],
+    ["3", "Exponential Functions", "Growth and decay, logarithmic relationships"],
+    ["4", "Trigonometry", "Sine law, cosine law, trig identities"],
+    ["5", "Sequences & Series", "Arithmetic and geometric patterns"],
+    ["6", "Financial Maths", "Simple and compound interest, annuities"]
+  ],
+  "Calculus & Vectors": [
+    ["1", "Rates of Change", "Average and instantaneous rates"],
+    ["2", "Derivatives", "Power, product, quotient, chain rules"],
+    ["3", "Curve Sketching", "Critical points and concavity"],
+    ["4", "Vectors", "Operations, dot and cross products"],
+    ["5", "Lines & Planes", "Equations in three dimensions"],
+    ["6", "Applications", "Optimization and related rates"]
+  ],
+  "Advanced Functions": [
+    ["1", "Polynomial Functions", "Factor theorem and graphs"],
+    ["2", "Rational Functions", "Asymptotes and discontinuities"],
+    ["3", "Exponential & Log", "Laws and equations"],
+    ["4", "Trigonometric Functions", "Radian measure and graphs"],
+    ["5", "Trig Identities", "Compound and double angle"],
+    ["6", "Combining Functions", "Composition and transformations"]
+  ],
+  "Data Management": [
+    ["1", "One-Variable Data", "Distributions and measures"],
+    ["2", "Two-Variable Data", "Scatter plots and regression"],
+    ["3", "Probability", "Counting and conditional probability"],
+    ["4", "Distributions", "Binomial and normal"],
+    ["5", "Sampling", "Methods and bias"],
+    ["6", "Culminating Project", "Statistical investigation"]
+  ],
+  "Pre-Calculus": [
+    ["1", "Functions & Graphs", "Transformations and inverses"],
+    ["2", "Polynomials", "Roots and factoring"],
+    ["3", "Trigonometry", "Unit circle and identities"],
+    ["4", "Exponents & Logs", "Equations and modelling"],
+    ["5", "Sequences", "Arithmetic and geometric series"],
+    ["6", "Conic Sections", "Parabolas, ellipses, hyperbolas"]
+  ],
+  "Foundations": [
+    ["1", "Number Sense", "Integers, fractions, percentages"],
+    ["2", "Measurement", "Perimeter, area, volume"],
+    ["3", "Linear Relations", "Slope and equations of lines"],
+    ["4", "Geometry", "Angles, triangles, similarity"],
+    ["5", "Data & Probability", "Graphs and simple probability"],
+    ["6", "Financial Literacy", "Budgeting and interest"]
+  ],
+
+  "Number & Algebra": [
+    ["1", "Sequences & Series", "Arithmetic, geometric, binomial theorem"],
+    ["2", "Exponents & Logs", "Laws of indices, logarithmic equations"],
+    ["3", "Proof & Induction", "Mathematical induction, proof techniques (HL)"],
+    ["4", "Complex Numbers", "Cartesian and polar form, De Moivre (HL)"],
+    ["5", "Systems & Matrices", "Linear systems, applications"],
+    ["6", "Counting Principles", "Permutations, combinations, binomial"]
+  ],
+  "Functions & Equations": [
+    ["1", "Function Basics", "Domain, range, composite, inverse"],
+    ["2", "Quadratics", "Discriminant, vertex, roots"],
+    ["3", "Rational Functions", "Asymptotes and graphs"],
+    ["4", "Transformations", "Translations, stretches, reflections"],
+    ["5", "Exponential & Log", "Modelling growth and decay"],
+    ["6", "Polynomials", "Factor and remainder theorem"]
+  ],
+  "Trigonometry": [
+    ["1", "Radian Measure", "Arc length and sector area"],
+    ["2", "Unit Circle", "Exact values and symmetry"],
+    ["3", "Trig Functions", "Graphs and transformations"],
+    ["4", "Identities", "Pythagorean and double angle"],
+    ["5", "Equations", "Solving trigonometric equations"],
+    ["6", "Applications", "Triangles, bearings, modelling"]
+  ],
+  "Calculus": [
+    ["1", "Limits & Continuity", "Informal limits and continuity"],
+    ["2", "Differentiation", "Rules and higher derivatives"],
+    ["3", "Applications of Derivatives", "Optimization and kinematics"],
+    ["4", "Integration", "Antiderivatives and definite integrals"],
+    ["5", "Areas & Volumes", "Integration applications"],
+    ["6", "Differential Equations", "Separable equations (HL)"]
+  ],
+  "Statistics & Probability": [
+    ["1", "Descriptive Statistics", "Measures of center and spread"],
+    ["2", "Correlation", "Regression and Pearson's r"],
+    ["3", "Probability", "Rules, Venn diagrams, conditional"],
+    ["4", "Distributions", "Binomial and normal distributions"],
+    ["5", "Random Variables", "Expected value and variance"],
+    ["6", "Hypothesis Testing", "Chi-squared and significance (HL)"]
+  ],
+  "Vectors (HL)": [
+    ["1", "Vector Basics", "Components, magnitude, unit vectors"],
+    ["2", "Scalar Product", "Dot product and angles"],
+    ["3", "Vector Product", "Cross product and areas"],
+    ["4", "Lines", "Vector and parametric equations"],
+    ["5", "Planes", "Equations and intersections"],
+    ["6", "Applications", "Distances and geometry"]
   ]
 };
 
@@ -462,5 +609,19 @@ document.querySelectorAll(".download-card button, .book-buttons button, .book-de
       button.textContent = original;
       button.classList.remove("is-clicked");
     }, 900);
+  });
+});
+
+document.querySelectorAll("[data-contact-form]").forEach((form) => {
+  const note = form.querySelector("[data-contact-note]");
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    form.reset();
+    if (note) {
+      note.hidden = false;
+      window.setTimeout(() => {
+        note.hidden = true;
+      }, 4000);
+    }
   });
 });

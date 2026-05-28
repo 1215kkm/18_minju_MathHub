@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문의 | MathHub</title>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+    />
+    <link rel="stylesheet" href="./styles.css?v=hero-polish-1" />
+  </head>
+  <body>
+    <header class="site-header sub-header">
+      <a class="logo" href="./index.html" aria-label="MathHub home">Math<span>Hub</span></a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="./concepts.html">개념 완성</a>
+        <a href="./past-exams.html">기출 문제</a>
+        <a href="./workbooks.html">문제집 &amp; 해설</a>
+        <a href="./global.html">국가별 과정</a>
+      </nav>
+      <button class="menu-button" type="button" aria-label="메뉴 열기" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="mobile-menu" aria-hidden="true">
+        <a href="./concepts.html">개념완성</a>
+        <a href="./past-exams.html">기출 문제</a>
+        <a href="./workbooks.html">문제집&amp;해설</a>
+        <button class="mobile-country-toggle" type="button">국가별 과정 <span>⌄</span></button>
+        <div class="mobile-country-options">
+          <a href="./global.html">🇺🇸 USA</a>
+          <a href="./global-uk.html">🇬🇧 United Kingdom</a>
+          <a href="./global-canada.html">🇨🇦 Canada</a>
+          <a href="./global-ib.html">🌐 IB Mathematics</a>
+        </div>
+        <button class="mobile-close" type="button" aria-label="메뉴 닫기">×</button>
+      </div>
+    </header>
+
+    <main class="info-page">
+      <section class="info-hero">
+        <h1>문의하기</h1>
+        <p>자료 제안, 오류 제보, 제휴 문의를 기다립니다</p>
+      </section>
+
+      <section class="info-content">
+        <article class="info-article">
+          <p class="info-lead">
+            궁금한 점이나 제안하고 싶은 자료가 있으신가요? 아래 채널로 연락 주시면
+            확인 후 빠르게 답변드리겠습니다.
+          </p>
+
+          <div class="info-card-grid">
+            <div class="info-card">
+              <strong>이메일</strong>
+              <p><a href="mailto:hello@mathhub.example">hello@mathhub.example</a></p>
+            </div>
+            <div class="info-card">
+              <strong>자료 제보</strong>
+              <p><a href="mailto:archive@mathhub.example">archive@mathhub.example</a></p>
+            </div>
+            <div class="info-card">
+              <strong>제휴 / 협업</strong>
+              <p><a href="mailto:partners@mathhub.example">partners@mathhub.example</a></p>
+            </div>
+            <div class="info-card">
+              <strong>운영 시간</strong>
+              <p>평일 10:00 – 18:00 (KST)</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="info-article">
+          <h2>메시지 보내기</h2>
+          <form class="contact-form" data-contact-form>
+            <div class="contact-field">
+              <label for="contact-name">이름</label>
+              <input id="contact-name" name="name" type="text" placeholder="이름을 입력해 주세요" required />
+            </div>
+            <div class="contact-field">
+              <label for="contact-email">이메일</label>
+              <input id="contact-email" name="email" type="email" placeholder="answer@email.com" required />
+            </div>
+            <div class="contact-field">
+              <label for="contact-message">문의 내용</label>
+              <textarea id="contact-message" name="message" placeholder="문의하실 내용을 자세히 적어주세요" required></textarea>
+            </div>
+            <button class="contact-submit" type="submit">보내기</button>
+            <p class="contact-note" data-contact-note hidden>문의가 접수되었습니다. 빠르게 답변드리겠습니다.</p>
+          </form>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer sub-footer">
+      <div class="footer-inner">
+        <a class="footer-logo" href="./index.html">MathHub</a>
+        <nav aria-label="Footer navigation">
+          <a href="./about.html">About Us</a>
+          <a href="./contact.html">Contact</a>
+          <a href="./terms.html">Terms of Service</a>
+          <a href="./privacy.html">Privacy Policy</a>
+          <a href="./contact.html">Support Us</a>
+        </nav>
+        <div class="footer-line"></div>
+        <p>© 2026 MathHub. All rights reserved.</p>
+        <div class="language-list" aria-label="Languages">
+          <span>🇰🇷</span><span>🇺🇸</span><span>🇬🇧</span><span>🇨🇦</span>
+        </div>
+      </div>
+    </footer>
+    <script src="./site.js?v=interactions-1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="./gsap-init.js"></script>
+  </body>
+</html>
