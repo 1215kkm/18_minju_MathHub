@@ -134,20 +134,8 @@ if (!prefersReduced) {
     });
   });
 
-  /* ── Review cards ── */
-  gsap.utils.toArray(".review-card").forEach(function(card, i) {
-    gsap.from(card, {
-      scrollTrigger: {
-        trigger: ".reviews-section",
-        start: "top 85%",
-        toggleActions: "play none none none"
-      },
-      y: 40,
-      opacity: 0,
-      duration: 0.6,
-      delay: i * 0.06
-    });
-  });
+  /* Review cards: motion handled by the CSS marquee, not GSAP
+     (GSAP inline transforms would break the seamless loop + hover lift) */
 
   /* ── Practice cards (global page) ── */
   gsap.utils.toArray(".practice-card").forEach(function(card, i) {

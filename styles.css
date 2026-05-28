@@ -780,9 +780,8 @@ button {
 
 .review-track {
   display: flex;
-  gap: 32px;
   width: max-content;
-  animation: reviewMarquee 34s linear infinite;
+  animation: reviewMarquee 40s linear infinite;
   will-change: transform;
 }
 
@@ -793,6 +792,7 @@ button {
 .review-card {
   flex: 0 0 250px;
   min-height: 282px;
+  margin-right: 32px;
   padding: 28px 25px 22px;
   background: #fff;
   border: 1px solid rgba(216, 228, 244, 0.7);
