@@ -44,9 +44,11 @@ const reviewTrack = document.querySelector("[data-review-track]");
 
 if (reviewTrack) {
   const originalCards = Array.from(reviewTrack.children);
-  originalCards.forEach((card) => {
-    const clone = card.cloneNode(true);
-    clone.setAttribute("aria-hidden", "true");
-    reviewTrack.appendChild(clone);
-  });
+  for (let i = 0; i < 2; i++) {
+    originalCards.forEach((card) => {
+      const clone = card.cloneNode(true);
+      clone.setAttribute("aria-hidden", "true");
+      reviewTrack.appendChild(clone);
+    });
+  }
 }

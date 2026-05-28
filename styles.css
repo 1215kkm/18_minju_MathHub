@@ -782,7 +782,6 @@ button {
   display: flex;
   gap: 32px;
   width: max-content;
-  padding-left: 28px;
   animation: reviewMarquee 34s linear infinite;
   will-change: transform;
 }
@@ -922,7 +921,7 @@ button {
   }
 
   to {
-    transform: translateX(-50%);
+    transform: translateX(calc(-100% / 3));
   }
 }
 
