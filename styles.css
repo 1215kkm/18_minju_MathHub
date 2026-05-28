@@ -305,6 +305,11 @@ button {
   outline: 3px solid rgba(43, 125, 234, 0.24);
 }
 
+.exam-logo.small {
+  font-size: 12px;
+  letter-spacing: -0.2px;
+}
+
 .exam-logo.sat,
 .exam-logo.psat {
   background: #12a0d7;
