@@ -46,6 +46,12 @@ button {
   cursor: pointer;
 }
 
+:focus-visible {
+  outline: 3px solid #2b7dea;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
 [hidden] {
   display: none !important;
 }
@@ -3191,6 +3197,108 @@ button.is-clicked {
   font-size: 15px;
   font-weight: 500;
   line-height: 1.6;
+}
+
+/* 404 page */
+.notfound-page {
+  display: grid;
+  place-items: center;
+  min-height: calc(100vh - 132px);
+  padding: 80px 24px;
+  background:
+    radial-gradient(circle at 80% 0%, rgba(116, 163, 237, 0.16) 0 220px, transparent 222px),
+    #fff;
+  text-align: center;
+}
+
+.notfound-code {
+  background: linear-gradient(112deg, #27bdd6 0%, #2a426f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 120px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.notfound h1 {
+  margin: 18px 0 0;
+  color: var(--ink);
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.notfound p {
+  margin: 16px 0 0;
+  color: var(--muted);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+.notfound-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.notfound-actions a {
+  display: inline-grid;
+  place-items: center;
+  min-height: 48px;
+  padding: 0 28px;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 800;
+  transition: background 160ms ease, border-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.nf-primary {
+  background: var(--blue);
+  color: #fff;
+}
+
+.nf-primary:hover {
+  background: #176ed8;
+  transform: translateY(-2px);
+}
+
+.nf-secondary {
+  background: #fff;
+  border: 1px solid var(--line);
+  color: #2b6fd0;
+}
+
+.nf-secondary:hover {
+  border-color: #8db6ff;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 760px) {
+  .notfound-page {
+    min-height: calc(100vh - 49px);
+    padding: 60px 20px;
+  }
+
+  .notfound-code {
+    font-size: 84px;
+  }
+
+  .notfound h1 {
+    font-size: 23px;
+  }
+
+  .notfound p {
+    font-size: 14px;
+  }
+
+  .notfound-actions a {
+    min-height: 44px;
+    font-size: 15px;
+  }
 }
 
 /* Detail pages */

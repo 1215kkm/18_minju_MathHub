@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>검색 | MathHub</title>
-    <meta name="description" content="MathHub의 개념·기출·문제집·국가별 자료를 한 번에 검색하세요." />
+    <title>페이지를 찾을 수 없습니다 | MathHub</title>
+    <meta name="description" content="요청하신 페이지를 찾을 수 없습니다. MathHub 홈이나 검색으로 이동해 보세요." />
+    <meta name="robots" content="noindex" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="MathHub" />
-    <meta property="og:title" content="검색 | MathHub" />
-    <meta property="og:description" content="MathHub의 개념·기출·문제집·국가별 자료를 한 번에 검색하세요." />
+    <meta property="og:title" content="페이지를 찾을 수 없습니다 | MathHub" />
     <meta name="twitter:card" content="summary" />
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <link rel="preconnect" href="https://cdn.jsdelivr.net" />
@@ -45,18 +45,15 @@
       </div>
     </header>
 
-    <main class="search-page">
-      <section class="search-hero">
-        <h1>무엇을 찾고 계신가요?</h1>
-        <form class="search-hero-form" data-search-page-form role="search">
-          <input type="search" name="q" placeholder="시험명, 개념, 교재를 검색해 보세요" aria-label="검색어" />
-          <button type="submit">검색</button>
-        </form>
-      </section>
-
-      <section class="search-content">
-        <p class="search-summary" data-search-summary></p>
-        <div data-search-results></div>
+    <main class="notfound-page">
+      <section class="notfound">
+        <div class="notfound-code">404</div>
+        <h1>페이지를 찾을 수 없습니다</h1>
+        <p>요청하신 페이지가 이동되었거나 존재하지 않습니다.<br />아래 링크로 다시 시작해 보세요.</p>
+        <div class="notfound-actions">
+          <a class="nf-primary" href="./index.html">홈으로 가기</a>
+          <a class="nf-secondary" href="./search.html">자료 검색하기</a>
+        </div>
       </section>
     </main>
 
@@ -78,9 +75,5 @@
       </div>
     </footer>
     <script src="./site.js?v=20260528"></script>
-    <script src="./search.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
-    <script src="./gsap-init.js"></script>
   </body>
 </html>
