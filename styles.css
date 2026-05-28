@@ -2430,9 +2430,9 @@ button.is-clicked {
 
 .global-hero {
   display: grid;
-  min-height: 210px;
+  min-height: 266px;
   place-items: center;
-  padding: 48px 24px 52px;
+  padding: 42px 24px 46px;
   background: linear-gradient(112deg, #27bdd6 0%, #2a426f 100%);
   color: #fff;
   text-align: center;
@@ -4732,7 +4732,11 @@ button.is-clicked {
     font-size: 12px;
   }
 
-  .global-hero,
+  .global-hero {
+    min-height: 96px;
+    padding: 20px 16px 22px;
+  }
+
   .info-hero {
     min-height: 120px;
     padding: 30px 18px;
