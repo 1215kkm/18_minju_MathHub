@@ -1087,12 +1087,38 @@ button {
 
   .exam-logos {
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 10px;
+    width: min(100%, 390px);
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .exam-logo {
-    width: 72px;
-    height: 60px;
+    width: 62px;
+    height: 52px;
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  .exam-logo.small {
+    font-size: 9px;
+  }
+
+  .exam-logo.sat,
+  .exam-logo.psat {
+    font-size: 22px;
+  }
+
+  .exam-logo.psat {
+    font-size: 13px;
+  }
+
+  .exam-logo.ap {
+    font-size: 27px;
+  }
+
+  .exam-logo.maa {
+    font-size: 12px;
   }
 
   .section-heading h2 {
@@ -4156,14 +4182,42 @@ button.is-clicked {
   }
 
   .exam-logos {
-    gap: 9px;
+    flex-wrap: nowrap;
+    gap: 6px;
+    width: min(100%, 300px);
     margin-top: 26px;
   }
 
   .exam-logo {
-    width: 45px;
+    width: 48px;
     height: 39px;
+    padding: 4px;
     border-radius: 6px;
+    font-size: 9px;
+    line-height: 1;
+    box-shadow: 0 7px 18px rgba(38, 80, 130, 0.12);
+  }
+
+  .exam-logo.small {
+    font-size: 8px;
+    letter-spacing: 0;
+  }
+
+  .exam-logo.sat,
+  .exam-logo.psat {
+    font-size: 18px;
+  }
+
+  .exam-logo.psat {
+    font-size: 10px;
+  }
+
+  .exam-logo.ap {
+    font-size: 22px;
+  }
+
+  .exam-logo.maa {
+    font-size: 10px;
   }
 
   .curriculum-section {
