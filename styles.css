@@ -5316,6 +5316,24 @@ button.is-clicked {
   min-width: 0;
 }
 
+/* 단원 토글용 `.side-group button { width:100% }`가 .lesson-check(button)에도
+   매칭돼 24px를 덮으므로, 더 구체적인 셀렉터로 체크 버튼 크기를 고정한다. */
+.detail-panel .side-group ol li > .lesson-check {
+  flex: 0 0 24px;
+  width: 24px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 단원 토글용 `.side-group button span { color:#8b8b8b }`가 체크마크에 새어들어
+   미완료에도 회색 ✓가 보이던 문제 — 미완료는 숨기고 완료만 흰 체크 표시. */
+.detail-panel .side-group ol li > .lesson-check .lesson-check-mark {
+  color: transparent;
+}
+.detail-panel .side-group ol li > .lesson-check.is-done .lesson-check-mark {
+  color: #fff;
+}
+
 .lesson-check {
   flex-shrink: 0;
   width: 24px;
