@@ -58,7 +58,7 @@
         box-shadow: 0 20px 60px rgba(31,64,116,0.14);
         text-align: center;
       }
-      .login-card .logo { color: var(--navy); font-size: 26px; font-weight: 850; }
+      .login-card .logo { margin: 0; color: var(--navy); font-size: 26px; font-weight: 850; line-height: 1.2; }
       .login-card .logo span { color: var(--cyan); }
       .login-card h2 { margin: 16px 0 28px; font-size: 18px; color: var(--muted); font-weight: 600; }
       .login-field {
@@ -164,6 +164,12 @@
         letter-spacing: 0.08em;
       }
       .sidebar-link {
+        /* button 기본 스타일 리셋 (div와 동일하게 보이도록) */
+        width: 100%;
+        text-align: left;
+        font: inherit;
+        background: none;
+        border: none;
         display: flex;
         align-items: center;
         gap: 10px;
@@ -174,6 +180,10 @@
         color: rgba(255,255,255,0.7);
         transition: background 160ms, color 160ms;
         cursor: pointer;
+      }
+      .sidebar-link:focus-visible {
+        outline: 2px solid var(--cyan);
+        outline-offset: 2px;
       }
       .sidebar-link:hover, .sidebar-link.active {
         background: rgba(255,255,255,0.1);
@@ -235,7 +245,7 @@
         background: #fff;
         border-bottom: 1px solid var(--line);
       }
-      .topbar-title { font-size: 18px; font-weight: 800; color: var(--navy); }
+      .topbar-title { margin: 0; font-size: 18px; font-weight: 800; color: var(--navy); }
       .topbar-actions { display: flex; align-items: center; gap: 12px; }
       .badge-dot {
         position: relative;
@@ -505,7 +515,7 @@
     <!-- LOGIN GATE -->
     <div id="login-gate">
       <div class="login-card">
-        <div class="logo">Math<span>Hub</span></div>
+        <h1 class="logo">Math<span>Hub</span> 관리자</h1>
         <h2>관리자 로그인</h2>
         <form id="login-form">
           <div class="login-field">
@@ -538,20 +548,20 @@
         <nav class="sidebar-nav">
           <div class="sidebar-section">
             <div class="sidebar-section-label">대시보드</div>
-            <div class="sidebar-link active" data-panel="dashboard"><span class="icon">🏠</span> 대시보드</div>
-            <div class="sidebar-link" data-panel="stats-link"><span class="icon">📊</span> 통계 보기</div>
+            <button type="button" class="sidebar-link active" data-panel="dashboard"><span class="icon">🏠</span> 대시보드</button>
+            <button type="button" class="sidebar-link" data-panel="stats-link"><span class="icon">📊</span> 통계 보기</button>
           </div>
           <div class="sidebar-section">
             <div class="sidebar-section-label">콘텐츠 관리</div>
-            <div class="sidebar-link" data-panel="exams"><span class="icon">📝</span> 기출문제</div>
-            <div class="sidebar-link" data-panel="concepts"><span class="icon">📚</span> 개념자료</div>
-            <div class="sidebar-link" data-panel="workbooks"><span class="icon">📖</span> 문제집</div>
+            <button type="button" class="sidebar-link" data-panel="exams"><span class="icon">📝</span> 기출문제</button>
+            <button type="button" class="sidebar-link" data-panel="concepts"><span class="icon">📚</span> 개념자료</button>
+            <button type="button" class="sidebar-link" data-panel="workbooks"><span class="icon">📖</span> 문제집</button>
           </div>
           <div class="sidebar-section">
             <div class="sidebar-section-label">운영</div>
-            <div class="sidebar-link" data-panel="notices"><span class="icon">📣</span> 공지사항</div>
-            <div class="sidebar-link" data-panel="users"><span class="icon">👥</span> 사용자</div>
-            <div class="sidebar-link" data-panel="settings"><span class="icon">⚙️</span> 설정</div>
+            <button type="button" class="sidebar-link" data-panel="notices"><span class="icon">📣</span> 공지사항</button>
+            <button type="button" class="sidebar-link" data-panel="users"><span class="icon">👥</span> 사용자</button>
+            <button type="button" class="sidebar-link" data-panel="settings"><span class="icon">⚙️</span> 설정</button>
           </div>
         </nav>
         <div class="sidebar-footer">
@@ -569,7 +579,7 @@
       <!-- MAIN -->
       <div class="main">
         <header class="topbar">
-          <div class="topbar-title" id="topbar-title">대시보드</div>
+          <h1 class="topbar-title" id="topbar-title">대시보드</h1>
           <div class="topbar-actions">
             <div class="badge-dot" title="알림">🔔</div>
             <a href="./index.html" class="btn btn-outline btn-sm">← 사이트 보기</a>
@@ -856,21 +866,23 @@
       <div class="modal">
         <div class="modal-header">
           <h3>기출문제 추가</h3>
-          <button class="modal-close" onclick="closeModal('exam-modal')">✕</button>
+          <button type="button" class="modal-close" onclick="closeModal('exam-modal')">✕</button>
         </div>
-        <div class="form-row">
-          <div class="form-group"><label>제목</label><input class="form-control" type="text" placeholder="예) 2026 수능 수학영역" /></div>
-          <div class="form-group"><label>연도</label><input class="form-control" type="number" placeholder="2026" /></div>
-        </div>
-        <div class="form-row">
-          <div class="form-group"><label>시험 종류</label><select class="form-control"><option>수능</option><option>학력평가</option><option>모의고사</option><option>AP</option><option>A-Level</option><option>IB</option></select></div>
-          <div class="form-group"><label>상태</label><select class="form-control"><option>공개</option><option>준비중</option><option>비공개</option></select></div>
-        </div>
-        <div class="form-group"><label>파일 업로드 (PDF)</label><input class="form-control" type="file" accept=".pdf" style="padding:8px 14px;height:auto" /></div>
-        <div class="form-actions">
-          <button class="btn btn-outline" onclick="closeModal('exam-modal')">취소</button>
-          <button class="btn btn-primary" onclick="closeModal('exam-modal');showToast('기출문제가 등록되었습니다.')">등록</button>
-        </div>
+        <form id="exam-form" data-modal="exam-modal" data-toast="기출문제가 등록되었습니다.">
+          <div class="form-row">
+            <div class="form-group"><label for="field-exam-title">제목</label><input id="field-exam-title" class="form-control" type="text" placeholder="예) 2026 수능 수학영역" required /></div>
+            <div class="form-group"><label for="field-exam-year">연도</label><input id="field-exam-year" class="form-control" type="number" placeholder="2026" required /></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label for="field-exam-type">시험 종류</label><select id="field-exam-type" class="form-control"><option>수능</option><option>학력평가</option><option>모의고사</option><option>AP</option><option>A-Level</option><option>IB</option></select></div>
+            <div class="form-group"><label for="field-exam-status">상태</label><select id="field-exam-status" class="form-control"><option>공개</option><option>준비중</option><option>비공개</option></select></div>
+          </div>
+          <div class="form-group"><label for="field-exam-file">파일 업로드 (PDF)</label><input id="field-exam-file" class="form-control" type="file" accept=".pdf" style="padding:8px 14px;height:auto" /></div>
+          <div class="form-actions">
+            <button type="button" class="btn btn-outline" onclick="closeModal('exam-modal')">취소</button>
+            <button type="submit" class="btn btn-primary">등록</button>
+          </div>
+        </form>
       </div>
     </div>
 
@@ -878,18 +890,20 @@
       <div class="modal">
         <div class="modal-header">
           <h3>개념자료 추가</h3>
-          <button class="modal-close" onclick="closeModal('concept-modal')">✕</button>
+          <button type="button" class="modal-close" onclick="closeModal('concept-modal')">✕</button>
         </div>
-        <div class="form-row">
-          <div class="form-group"><label>단원명</label><input class="form-control" type="text" placeholder="예) 미분의 응용" /></div>
-          <div class="form-group"><label>과정</label><select class="form-control"><option>수능</option><option>AP</option><option>A-Level</option><option>IB</option></select></div>
-        </div>
-        <div class="form-group"><label>난이도</label><select class="form-control"><option>기초</option><option>중급</option><option>고급</option></select></div>
-        <div class="form-group"><label>파일 업로드</label><input class="form-control" type="file" style="padding:8px 14px;height:auto" /></div>
-        <div class="form-actions">
-          <button class="btn btn-outline" onclick="closeModal('concept-modal')">취소</button>
-          <button class="btn btn-primary" onclick="closeModal('concept-modal');showToast('개념자료가 등록되었습니다.')">등록</button>
-        </div>
+        <form id="concept-form" data-modal="concept-modal" data-toast="개념자료가 등록되었습니다.">
+          <div class="form-row">
+            <div class="form-group"><label for="field-concept-title">단원명</label><input id="field-concept-title" class="form-control" type="text" placeholder="예) 미분의 응용" required /></div>
+            <div class="form-group"><label for="field-concept-course">과정</label><select id="field-concept-course" class="form-control"><option>수능</option><option>AP</option><option>A-Level</option><option>IB</option></select></div>
+          </div>
+          <div class="form-group"><label for="field-concept-level">난이도</label><select id="field-concept-level" class="form-control"><option>기초</option><option>중급</option><option>고급</option></select></div>
+          <div class="form-group"><label for="field-concept-file">파일 업로드</label><input id="field-concept-file" class="form-control" type="file" style="padding:8px 14px;height:auto" /></div>
+          <div class="form-actions">
+            <button type="button" class="btn btn-outline" onclick="closeModal('concept-modal')">취소</button>
+            <button type="submit" class="btn btn-primary">등록</button>
+          </div>
+        </form>
       </div>
     </div>
 
@@ -897,21 +911,23 @@
       <div class="modal">
         <div class="modal-header">
           <h3>문제집 추가</h3>
-          <button class="modal-close" onclick="closeModal('workbook-modal')">✕</button>
+          <button type="button" class="modal-close" onclick="closeModal('workbook-modal')">✕</button>
         </div>
-        <div class="form-row">
-          <div class="form-group"><label>제목</label><input class="form-control" type="text" placeholder="예) 수학의 정석" /></div>
-          <div class="form-group"><label>출판사</label><input class="form-control" type="text" placeholder="예) 성문출판사" /></div>
-        </div>
-        <div class="form-row">
-          <div class="form-group"><label>과정</label><select class="form-control"><option>수능</option><option>SAT</option><option>AP</option><option>A-Level</option><option>IB</option></select></div>
-          <div class="form-group"><label>상태</label><select class="form-control"><option>공개</option><option>준비중</option></select></div>
-        </div>
-        <div class="form-group"><label>파일 업로드</label><input class="form-control" type="file" style="padding:8px 14px;height:auto" /></div>
-        <div class="form-actions">
-          <button class="btn btn-outline" onclick="closeModal('workbook-modal')">취소</button>
-          <button class="btn btn-primary" onclick="closeModal('workbook-modal');showToast('문제집이 등록되었습니다.')">등록</button>
-        </div>
+        <form id="workbook-form" data-modal="workbook-modal" data-toast="문제집이 등록되었습니다.">
+          <div class="form-row">
+            <div class="form-group"><label for="field-workbook-title">제목</label><input id="field-workbook-title" class="form-control" type="text" placeholder="예) 수학의 정석" required /></div>
+            <div class="form-group"><label for="field-workbook-publisher">출판사</label><input id="field-workbook-publisher" class="form-control" type="text" placeholder="예) 성문출판사" required /></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label for="field-workbook-course">과정</label><select id="field-workbook-course" class="form-control"><option>수능</option><option>SAT</option><option>AP</option><option>A-Level</option><option>IB</option></select></div>
+            <div class="form-group"><label for="field-workbook-status">상태</label><select id="field-workbook-status" class="form-control"><option>공개</option><option>준비중</option></select></div>
+          </div>
+          <div class="form-group"><label for="field-workbook-file">파일 업로드</label><input id="field-workbook-file" class="form-control" type="file" style="padding:8px 14px;height:auto" /></div>
+          <div class="form-actions">
+            <button type="button" class="btn btn-outline" onclick="closeModal('workbook-modal')">취소</button>
+            <button type="submit" class="btn btn-primary">등록</button>
+          </div>
+        </form>
       </div>
     </div>
 
@@ -919,18 +935,20 @@
       <div class="modal">
         <div class="modal-header">
           <h3>공지사항 추가</h3>
-          <button class="modal-close" onclick="closeModal('notice-modal')">✕</button>
+          <button type="button" class="modal-close" onclick="closeModal('notice-modal')">✕</button>
         </div>
-        <div class="form-group"><label>제목</label><input class="form-control" type="text" placeholder="공지 제목 입력" /></div>
-        <div class="form-group"><label>내용</label><textarea class="form-control" placeholder="공지 내용 입력..."></textarea></div>
-        <div class="form-row">
-          <div class="form-group"><label>공개 일시</label><input class="form-control" type="datetime-local" /></div>
-          <div class="form-group"><label>상태</label><select class="form-control"><option>공개</option><option>예약</option><option>비공개</option></select></div>
-        </div>
-        <div class="form-actions">
-          <button class="btn btn-outline" onclick="closeModal('notice-modal')">취소</button>
-          <button class="btn btn-primary" onclick="closeModal('notice-modal');showToast('공지사항이 등록되었습니다.')">등록</button>
-        </div>
+        <form id="notice-form" data-modal="notice-modal" data-toast="공지사항이 등록되었습니다.">
+          <div class="form-group"><label for="field-notice-title">제목</label><input id="field-notice-title" class="form-control" type="text" placeholder="공지 제목 입력" required /></div>
+          <div class="form-group"><label for="field-notice-body">내용</label><textarea id="field-notice-body" class="form-control" placeholder="공지 내용 입력..." required></textarea></div>
+          <div class="form-row">
+            <div class="form-group"><label for="field-notice-datetime">공개 일시</label><input id="field-notice-datetime" class="form-control" type="datetime-local" /></div>
+            <div class="form-group"><label for="field-notice-status">상태</label><select id="field-notice-status" class="form-control"><option>공개</option><option>예약</option><option>비공개</option></select></div>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn btn-outline" onclick="closeModal('notice-modal')">취소</button>
+            <button type="submit" class="btn btn-primary">등록</button>
+          </div>
+        </form>
       </div>
     </div>
 
@@ -998,6 +1016,17 @@
       function closeModal(id) { document.getElementById(id).classList.remove("open"); }
       document.querySelectorAll(".modal-backdrop").forEach(backdrop => {
         backdrop.addEventListener("click", (e) => { if (e.target === backdrop) backdrop.classList.remove("open"); });
+      });
+
+      // 모달 폼 제출 — Enter 제출/required 검증 후 기존 등록 동작(닫기+토스트) 수행
+      // data-modal: 닫을 모달 id, data-toast: 안내 문구
+      document.querySelectorAll("form[data-modal]").forEach(form => {
+        form.addEventListener("submit", (e) => {
+          e.preventDefault(); // 데모: 실제 저장 없음, 페이지 리로드 방지
+          closeModal(form.dataset.modal);
+          showToast(form.dataset.toast);
+          form.reset();
+        });
       });
 
       // Toast

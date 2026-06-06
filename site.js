@@ -1,6 +1,204 @@
 const menuButtons = document.querySelectorAll(".menu-button");
 const normalizeText = (value) => value.toLowerCase().replace(/\s+/g, "");
 
+/* ───────────────────────────────────────────────────────────
+   개인화 저장소 (localStorage) — 로그인 없이 "기억하는 사이트"
+   - 키 네임스페이스: mathhub:bookmarks / mathhub:recent / mathhub:progress
+   - 사파리 프라이빗 모드 등에서 localStorage 접근이 막혀도
+     try/catch로 무동작 처리(사이트는 그대로 작동).
+   - concept-detail.js도 같은 패턴을 쓰지만, 공유 코드 의존을 만들지 않으려
+     각 파일이 독립적으로 동작하도록 site.js는 자기 마크업만 다룬다.
+   ─────────────────────────────────────────────────────────── */
+const STORE = {
+  bookmarks: "mathhub:bookmarks",
+  recent: "mathhub:recent",
+  progress: "mathhub:progress",
+};
+
+const readStore = (key, fallback) => {
+  try {
+    const raw = window.localStorage.getItem(key);
+    return raw ? JSON.parse(raw) : fallback;
+  } catch (_) {
+    return fallback;
+  }
+};
+
+const writeStore = (key, value) => {
+  try {
+    window.localStorage.setItem(key, JSON.stringify(value));
+    return true;
+  } catch (_) {
+    return false;
+  }
+};
+
+/* localStorage에서 읽은 값을 innerHTML 경로로 넣을 때 XSS 차단용 escape.
+   사용자 직접 입력값은 아니지만 방어적으로 항상 통과시킨다. */
+const escapeHtml = (value) =>
+  String(value).replace(/[&<>"']/g, (ch) => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#39;",
+  }[ch]));
+
+/* 최근 본 자료에 항목 추가: url 기준 중복 제거 후 맨 앞, 최대 8개. */
+const pushRecent = (item) => {
+  if (!item || !item.url) return;
+  const list = readStore(STORE.recent, []).filter((r) => r && r.url !== item.url);
+  list.unshift({ type: item.type, title: item.title, url: item.url });
+  writeStore(STORE.recent, list.slice(0, 8));
+};
+
+const RECENT_TYPE_LABEL = { concept: "개념", exam: "기출", workbook: "문제집" };
+
+/* [data-recent] 섹션을 최근 본 자료로 채운다. 항목 없으면 섹션 자체를 숨김. */
+const renderRecentSections = () => {
+  const sections = document.querySelectorAll("[data-recent]");
+  if (!sections.length) return;
+  const list = readStore(STORE.recent, []);
+  sections.forEach((section) => {
+    const track = section.querySelector("[data-recent-track]");
+    if (!track) return;
+    if (!Array.isArray(list) || !list.length) {
+      section.hidden = true;
+      return;
+    }
+    track.innerHTML = list
+      .map((item) => {
+        const label = RECENT_TYPE_LABEL[item.type] || "자료";
+        return (
+          `<a class="recent-card" href="${escapeHtml(item.url)}">` +
+          `<span class="recent-type recent-type-${escapeHtml(item.type)}">${escapeHtml(label)}</span>` +
+          `<strong>${escapeHtml(item.title)}</strong>` +
+          `<span class="recent-go">이어보기 →</span>` +
+          "</a>"
+        );
+      })
+      .join("");
+    section.hidden = false;
+  });
+};
+
+/* 북마크 토글 버튼([data-bookmark]) 동기화 — concept이 아닌 정적 상세용(exam/workbook).
+   concept-detail은 topic마다 식별자가 달라 concept-detail.js가 직접 처리한다. */
+const setupStaticBookmarks = () => {
+  document.querySelectorAll("[data-bookmark]").forEach((btn) => {
+    const type = btn.getAttribute("data-bookmark-type");
+    const title = btn.getAttribute("data-bookmark-title") || document.title;
+    // 정적 상세 페이지 식별자는 쿼리/해시 없는 파일명으로 고정.
+    const url = (location.pathname.split("/").pop() || "index.html") || "index.html";
+
+    const isSaved = () => readStore(STORE.bookmarks, []).some((b) => b && b.url === url);
+
+    const sync = () => {
+      const saved = isSaved();
+      btn.setAttribute("aria-pressed", String(saved));
+      btn.classList.toggle("is-saved", saved);
+      const label = saved ? "북마크 해제" : "북마크 추가";
+      btn.setAttribute("aria-label", label);
+      const icon = btn.querySelector(".bookmark-icon");
+      if (icon) icon.textContent = saved ? "♥" : "♡";
+      const text = btn.querySelector(".bookmark-text");
+      if (text) text.textContent = saved ? "북마크됨" : "북마크";
+    };
+
+    btn.addEventListener("click", () => {
+      const list = readStore(STORE.bookmarks, []);
+      const next = isSaved()
+        ? list.filter((b) => b && b.url !== url)
+        : [...list, { type, title, url }];
+      writeStore(STORE.bookmarks, next);
+      sync();
+    });
+
+    sync();
+  });
+};
+
+/* exam/workbook 상세 진입 시 최근 본 자료 기록(정적 title 사용). */
+const trackStaticRecent = () => {
+  const marker = document.querySelector("[data-recent-track-self]");
+  if (!marker) return;
+  pushRecent({
+    type: marker.getAttribute("data-recent-track-self"),
+    title: marker.getAttribute("data-recent-title") || document.title,
+    url: (location.pathname.split("/").pop() || "index.html") || "index.html",
+  });
+};
+
+/* concepts.html 개념 카드에 진도 뱃지 주입.
+   카드의 #lesson-N 링크로 topic을 읽어 progress의 완료 수를 표시한다. */
+const renderConceptProgressBadges = () => {
+  const list = document.querySelector(".concept-content .lesson-list");
+  if (!list) return;
+  const progress = readStore(STORE.progress, {});
+  const cards = Array.from(list.querySelectorAll(".lesson-card"));
+  const total = cards.length;
+  if (!total) return;
+
+  // 이 단원의 topic은 카드 링크의 ?topic= 값(모두 동일)에서 추출.
+  const sampleLink = list.querySelector('a[href*="topic="]');
+  if (!sampleLink) return;
+  // href가 "...?topic=numbers#lesson-1"처럼 해시를 포함하므로 #앞까지만 파싱한다.
+  const query = (sampleLink.getAttribute("href").split("?")[1] || "").split("#")[0];
+  const topicKey = new URLSearchParams(query).get("topic");
+  if (!topicKey) return;
+
+  const done = Array.isArray(progress[topicKey]) ? progress[topicKey].length : 0;
+
+  cards.forEach((card) => {
+    const link = card.querySelector('a[href*="#lesson-"]');
+    if (!link) return;
+    const idx = Number((link.getAttribute("href").match(/#lesson-(\d+)/) || [])[1]) - 1;
+    const isDone = Array.isArray(progress[topicKey]) && progress[topicKey].includes(idx);
+    if (isDone && !card.querySelector(".lesson-done-badge")) {
+      const badge = document.createElement("span");
+      badge.className = "lesson-done-badge";
+      badge.textContent = "✓ 완료";
+      card.querySelector("div")?.appendChild(badge);
+    }
+  });
+
+  // 단원 헤더에 "N/총 완료" 요약 뱃지(0이면 은은하게 0/N).
+  const head = document.querySelector(".concept-content .unit-head > div h2");
+  if (head && !head.querySelector(".unit-progress-badge")) {
+    const badge = document.createElement("span");
+    badge.className = "unit-progress-badge";
+    if (done === 0) badge.classList.add("is-zero");
+    badge.textContent = `${done}/${total} 완료`;
+    head.appendChild(document.createTextNode(" "));
+    head.appendChild(badge);
+  }
+};
+
+renderRecentSections();
+setupStaticBookmarks();
+trackStaticRecent();
+renderConceptProgressBadges();
+
+// 현재 페이지에 해당하는 헤더 내비 링크에 aria-current="page" 표시.
+// 상세 페이지는 상위 섹션으로 매핑한다.
+(() => {
+  const current = (location.pathname.split("/").pop() || "index.html") || "index.html";
+  const sectionOf = {
+    "concept-detail.html": "concepts.html",
+    "exam-detail.html": "past-exams.html",
+    "workbook-detail.html": "workbooks.html",
+    "global-uk.html": "global.html",
+    "global-canada.html": "global.html",
+    "global-ib.html": "global.html",
+    "global-guide.html": "global.html",
+  };
+  const target = sectionOf[current] || current;
+  document.querySelectorAll(".site-header .nav a").forEach((link) => {
+    const href = (link.getAttribute("href") || "").split("/").pop();
+    if (href === target) link.setAttribute("aria-current", "page");
+  });
+})();
+
 menuButtons.forEach((button) => {
   const header = button.closest(".site-header");
   const menu = header?.querySelector(".mobile-menu");
@@ -561,6 +759,32 @@ document.querySelectorAll(".testbook-section").forEach((section) => {
         <span>${chapter[0]}</span><small>more</small><h3>${chapter[1]}</h3><p>${chapter[2]}</p>
       </article>
     `).join("");
+
+    /* 탭 전환 후 새로 생성된 카드에 재등장 애니메이션 적용.
+       gsap 미로드 또는 prefers-reduced-motion 환경에서는
+       카드가 그냥 보이도록 가드한다. */
+    const newCards = grid.querySelectorAll(".chapter-card");
+    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (window.gsap && !prefersReduced) {
+      gsap.fromTo(
+        newCards,
+        { opacity: 0, y: 35 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.5,
+          ease: "power3.out",
+          stagger: 0.06,
+          clearProps: "opacity,y"
+        }
+      );
+    } else {
+      /* 애니메이션 없이 즉시 보이도록 인라인 스타일 초기화 */
+      newCards.forEach((card) => {
+        card.style.opacity = "";
+        card.style.transform = "";
+      });
+    }
   };
 
   tabs.forEach((tab) => {

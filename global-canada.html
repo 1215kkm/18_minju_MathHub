@@ -2,10 +2,13 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <script>document.documentElement.classList.add("js");setTimeout(function(){document.documentElement.classList.add("anim-ready")},2400);</script>
+    <script>document.documentElement.classList.add("js");setTimeout(function(){document.documentElement.classList.add("anim-ready")},600);</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MathHub Canada | MathHub</title>
     <meta name="description" content="캐나다 CEMC 경시대회·주별 교육과정 수학 자료와 가이드를 제공합니다." />
+    <link rel="canonical" href="https://jiwon12011.github.io/mathhub/global-canada.html" />
+    <meta property="og:url" content="https://jiwon12011.github.io/mathhub/global-canada.html" />
+    <meta property="og:image" content="https://jiwon12011.github.io/mathhub/assets/images/og-cover.png" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="MathHub" />
     <meta property="og:title" content="MathHub Canada | MathHub" />
@@ -19,9 +22,10 @@
       crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
     />
-    <link rel="stylesheet" href="./styles.css?v=20260528" />
+    <link rel="stylesheet" href="./styles.css?v=20260606" />
   </head>
   <body>
+    <a class="skip-link" href="#main">본문 바로가기</a>
     <header class="site-header sub-header">
       <a class="logo" href="./index.html" aria-label="MathHub home">Math<span>Hub</span></a>
       <nav class="nav" aria-label="Main navigation">
@@ -46,7 +50,7 @@
       </div>
     </header>
 
-    <main class="global-page">
+    <main id="main" class="global-page">
       <section class="global-hero">
         <h1>MathHub Canada</h1>
         <p>CEMC Competitions, Provincial Curriculum &amp; Canadian Maths Resources</p>
@@ -110,7 +114,7 @@
           <div class="guide-grid">
             <article class="guide-card">
               <span class="guide-tag">Contest &amp; University Prep</span>
-              <img src="./assets/images/mask-group-copy.png" alt="CEMC guide illustration"  loading="lazy" decoding="async" />
+              <img src="./assets/images/mask-group-copy.png" width="658" height="397" alt="CEMC guide illustration"  loading="lazy" decoding="async" />
               <div>
                 <h3>2026 CEMC Contest Dates &amp; Guide</h3>
                 <p>The Centre for Education in Mathematics and Computing (CEMC) at the University of Waterloo runs Canada's most respected mathematics contests. From Pascal to Euclid, strong results are valued by universities and can support scholarship applications nationwide.</p>
@@ -119,7 +123,7 @@
             </article>
             <article class="guide-card">
               <span class="guide-tag">University Guide</span>
-              <img src="./assets/images/mask-group-01.png" alt="University guide illustration"  loading="lazy" decoding="async" />
+              <img src="./assets/images/mask-group-01.png" width="658" height="397" alt="University guide illustration"  loading="lazy" decoding="async" />
               <div>
                 <h3>Top Mathematics Universities<br />in Canada 2026</h3>
                 <p>Waterloo, Toronto, UBC, and McGill lead Canadian mathematics education with strong co-op and research programmes. This guide covers admission averages, contest expectations, and how provincial curricula map to university entry.</p>
@@ -149,9 +153,9 @@
         </div>
       </div>
     </footer>
-    <script src="./site.js?v=20260528"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
-    <script src="./gsap-init.js"></script>
+    <script src="./site.js?v=20260606" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js" defer></script>
+    <script src="./gsap-init.js" defer></script>
   </body>
 </html>

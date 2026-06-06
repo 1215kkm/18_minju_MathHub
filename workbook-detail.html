@@ -2,10 +2,13 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <script>document.documentElement.classList.add("js");setTimeout(function(){document.documentElement.classList.add("anim-ready")},2400);</script>
+    <script>document.documentElement.classList.add("js");setTimeout(function(){document.documentElement.classList.add("anim-ready")},600);</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>쎈 중등 수학 상세 | MathHub</title>
     <meta name="description" content="문제집 구성과 단계별 해설 미리보기를 확인하세요." />
+    <link rel="canonical" href="https://jiwon12011.github.io/mathhub/workbook-detail.html" />
+    <meta property="og:url" content="https://jiwon12011.github.io/mathhub/workbook-detail.html" />
+    <meta property="og:image" content="https://jiwon12011.github.io/mathhub/assets/images/og-cover.png" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="MathHub" />
     <meta property="og:title" content="쎈 중등 수학 상세 | MathHub" />
@@ -19,9 +22,17 @@
       crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
     />
-    <link rel="stylesheet" href="./styles.css?v=20260528" />
+    <link rel="stylesheet" href="./styles.css?v=20260606" />
+    <!-- KaTeX 수식 렌더링 (대표 해설 미리보기) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"
+      integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
+    <a class="skip-link" href="#main">본문 바로가기</a>
     <header class="site-header sub-header">
       <a class="logo" href="./index.html" aria-label="MathHub home">Math<span>Hub</span></a>
       <nav class="nav" aria-label="Main navigation">
@@ -44,7 +55,7 @@
       </div>
     </header>
 
-    <main class="workbook-page detail-page">
+    <main id="main" class="workbook-page detail-page">
       <section class="exam-hero workbook-hero">
         <h1>문제집 선택도 전략입니다.</h1>
         <p>교재 구성과 해설 흐름까지 확인하고 시작하세요.</p>
@@ -65,7 +76,12 @@
             <div class="book-detail-actions">
               <a class="detail-primary" href="#">교재 PDF 보기</a>
               <button type="button">↓ 해설 다운로드</button>
+              <button class="bookmark-btn" type="button" data-bookmark data-bookmark-type="workbook" data-bookmark-title="쎈 중등 수학" aria-pressed="false" aria-label="북마크 추가">
+                <span class="bookmark-icon" aria-hidden="true">♡</span>
+                <span class="bookmark-text">북마크</span>
+              </button>
             </div>
+            <span hidden data-recent-track-self="workbook" data-recent-title="쎈 중등 수학"></span>
           </div>
         </section>
 
@@ -80,10 +96,10 @@
           <section class="detail-panel-card">
             <h3>교재 구성</h3>
             <div class="chapter-list">
-              <a href="./concept-detail.html"><span>1</span><strong>소수와 합성수</strong><em>자연수를 약수의 개수에 따라 분류</em></a>
-              <a href="./concept-detail.html"><span>2</span><strong>소인수분해</strong><em>합성수를 소수들의 곱으로 분해</em></a>
-              <a href="./concept-detail.html"><span>3</span><strong>최대공약수와 최소공배수</strong><em>소인수분해를 이용한 수의 구조</em></a>
-              <a href="./concept-detail.html"><span>4</span><strong>정수와 유리수</strong><em>수직선 위의 위치와 부호 이해</em></a>
+              <a href="./concept-detail.html?topic=numbers#lesson-1"><span>1</span><strong>소수와 합성수</strong><em>자연수를 약수의 개수에 따라 분류</em></a>
+              <a href="./concept-detail.html?topic=numbers#lesson-2"><span>2</span><strong>소인수분해</strong><em>합성수를 소수들의 곱으로 분해</em></a>
+              <a href="./concept-detail.html?topic=numbers#lesson-3"><span>3</span><strong>최대공약수와 최소공배수</strong><em>소인수분해를 이용한 수의 구조</em></a>
+              <a href="./concept-detail.html?topic=numbers#lesson-4"><span>4</span><strong>정수와 유리수</strong><em>수직선 위의 위치와 부호 이해</em></a>
             </div>
           </section>
 
@@ -96,7 +112,7 @@
             </ul>
             <div class="solution-preview">
               <strong>대표 해설</strong>
-              <p>24를 소인수분해하면 2 × 2 × 2 × 3입니다. 같은 소수끼리 묶어 2³ × 3으로 표현합니다.</p>
+              <p>24를 소인수분해하면 \(2 \times 2 \times 2 \times 3\)입니다. 같은 소수끼리 묶어 \(2^3 \times 3\)으로 표현합니다.</p>
             </div>
           </section>
         </div>
@@ -104,7 +120,7 @@
         <section class="detail-panel-card">
           <h3>함께 보면 좋은 자료</h3>
           <div class="detail-resource-grid">
-            <a href="./concept-detail.html"><strong>소인수분해 개념</strong><span>문제를 풀기 전 핵심 개념을 먼저 정리</span></a>
+            <a href="./concept-detail.html?topic=numbers#lesson-2"><strong>소인수분해 개념</strong><span>문제를 풀기 전 핵심 개념을 먼저 정리</span></a>
             <a href="./exam-detail.html"><strong>2026 고3 3월 기출</strong><span>등급컷과 오답률로 실전 감각 확인</span></a>
             <a href="./workbooks.html"><strong>다른 교재 찾기</strong><span>출판사, 난이도, 출간연도로 비교</span></a>
           </div>
@@ -123,9 +139,23 @@
         <div class="language-list" aria-label="Languages"><span>🇰🇷</span><span>🇺🇸</span><span>🇬🇧</span><span>🇨🇦</span></div>
       </div>
     </footer>
-    <script src="./site.js?v=20260528"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
-    <script src="./gsap-init.js"></script>
+    <script src="./site.js?v=20260606" defer></script>
+    <!-- KaTeX: 본문은 정적이므로 로드 후 한 번만 렌더 -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"
+      integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+      integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk"
+      crossorigin="anonymous"
+      defer
+      onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'\\(',right:'\\)',display:false}],throwOnError:false})"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js" defer></script>
+    <script src="./gsap-init.js" defer></script>
   </body>
 </html>

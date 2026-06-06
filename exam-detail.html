@@ -2,10 +2,13 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <script>document.documentElement.classList.add("js");setTimeout(function(){document.documentElement.classList.add("anim-ready")},2400);</script>
+    <script>document.documentElement.classList.add("js");setTimeout(function(){document.documentElement.classList.add("anim-ready")},600);</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>2026 고3 3월 학력평가 | MathHub</title>
     <meta name="description" content="기출문제 상세 분석 — 등급컷, 오답률, 문항별 해설을 확인하세요." />
+    <link rel="canonical" href="https://jiwon12011.github.io/mathhub/exam-detail.html" />
+    <meta property="og:url" content="https://jiwon12011.github.io/mathhub/exam-detail.html" />
+    <meta property="og:image" content="https://jiwon12011.github.io/mathhub/assets/images/og-cover.png" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="MathHub" />
     <meta property="og:title" content="2026 고3 3월 학력평가 | MathHub" />
@@ -19,9 +22,10 @@
       crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
     />
-    <link rel="stylesheet" href="./styles.css?v=20260528" />
+    <link rel="stylesheet" href="./styles.css?v=20260606" />
   </head>
   <body>
+    <a class="skip-link" href="#main">본문 바로가기</a>
     <header class="site-header sub-header">
       <a class="logo" href="./index.html" aria-label="MathHub home">Math<span>Hub</span></a>
       <nav class="nav" aria-label="Main navigation">
@@ -46,7 +50,7 @@
       </div>
     </header>
 
-    <main class="exam-page detail-page">
+    <main id="main" class="exam-page detail-page">
       <section class="exam-hero">
         <h1>기출은 전략이다</h1>
         <p>한 회차를 제대로 분석하고, 다음 학습으로 바로 연결하세요.</p>
@@ -63,8 +67,15 @@
             <h2>수학 기출문제 상세 분석</h2>
             <p>28문항 PDF와 전문항 해설, 등급컷, 오답률 상위 문항을 한 번에 확인할 수 있습니다.</p>
           </div>
-          <a class="detail-primary" href="#">PDF 전체 다운로드</a>
+          <div class="detail-title-actions">
+            <button class="bookmark-btn" type="button" data-bookmark data-bookmark-type="exam" data-bookmark-title="2026 고3 3월 학력평가" aria-pressed="false" aria-label="북마크 추가">
+              <span class="bookmark-icon" aria-hidden="true">♡</span>
+              <span class="bookmark-text">북마크</span>
+            </button>
+            <a class="detail-primary" href="#">PDF 전체 다운로드</a>
+          </div>
         </section>
+        <span hidden data-recent-track-self="exam" data-recent-title="2026 고3 3월 학력평가"></span>
 
         <section class="detail-summary-grid">
           <article><span>응시 학년</span><strong>고등학교 3학년</strong><p>학력평가 · 공통 + 선택</p></article>
@@ -134,7 +145,7 @@
         <section class="detail-panel-card">
           <h3>추천 학습 순서</h3>
           <div class="detail-resource-grid">
-            <a href="./concept-detail.html"><strong>1. 약한 개념 복습</strong><span>정수와 유리수의 사칙연산부터 조건 해석까지 정리</span></a>
+            <a href="./concept-detail.html?topic=numbers#lesson-6"><strong>1. 약한 개념 복습</strong><span>정수와 유리수의 사칙연산부터 조건 해석까지 정리</span></a>
             <a href="./workbook-detail.html"><strong>2. 유사 문제 풀이</strong><span>쎈 중등 수학 유형별 문제로 계산 실수 줄이기</span></a>
             <a href="./past-exams.html"><strong>3. 다른 회차 비교</strong><span>6월 학력평가와 오답률 변화 확인</span></a>
           </div>
@@ -153,9 +164,9 @@
         <div class="language-list" aria-label="Languages"><span>🇰🇷</span><span>🇺🇸</span><span>🇬🇧</span><span>🇨🇦</span></div>
       </div>
     </footer>
-    <script src="./site.js?v=20260528"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
-    <script src="./gsap-init.js"></script>
+    <script src="./site.js?v=20260606" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js" defer></script>
+    <script src="./gsap-init.js" defer></script>
   </body>
 </html>

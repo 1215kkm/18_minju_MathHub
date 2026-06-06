@@ -186,7 +186,7 @@ if (!prefersReduced) {
       y: 50,
       opacity: 0,
       duration: 0.7,
-      delay: i * 0.12
+      delay: Math.min(i, 3) * 0.10
     });
   });
 
@@ -349,7 +349,7 @@ if (!prefersReduced) {
       y: 25,
       opacity: 0,
       duration: 0.5,
-      delay: i * 0.08
+      delay: Math.min(i, 3) * 0.08
     });
   });
 

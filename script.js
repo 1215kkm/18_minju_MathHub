@@ -9,7 +9,12 @@ const goToSearch = (query) => {
 searchForm?.addEventListener("submit", (event) => {
   event.preventDefault();
   const input = searchForm.querySelector("input");
-  const query = input.value.trim() || input.placeholder.replace("# ", "");
+  const query = input.value.trim();
+  if (!query) {
+    input.focus();
+    if (searchFeedback) searchFeedback.textContent = "검색어를 입력해 주세요.";
+    return;
+  }
   goToSearch(query);
 });
 

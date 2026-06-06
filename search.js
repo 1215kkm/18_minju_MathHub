@@ -9,11 +9,11 @@
 
   const RESOURCES = [
     // 개념 완성
-    { title: "수와 연산", category: "개념 완성", href: "./concept-detail.html", desc: "유리수·소수 연산의 기초 개념을 기출과 연결해 정리합니다.", tags: ["중학수학", "연산", "유리수"] },
-    { title: "문자와 식", category: "개념 완성", href: "./concept-detail.html", desc: "문자를 이용한 식의 표현과 일차식 계산의 핵심 개념.", tags: ["중학수학", "일차식"] },
-    { title: "일차방정식", category: "개념 완성", href: "./concept-detail.html", desc: "방정식의 풀이 원리와 활용 문제 접근법.", tags: ["중학수학", "방정식"] },
-    { title: "함수와 그래프", category: "개념 완성", href: "./concept-detail.html", desc: "함수의 정의, 그래프 해석, 변환을 단계별로 학습.", tags: ["고등수학", "함수"] },
-    { title: "미적분 기초", category: "개념 완성", href: "./concept-detail.html", desc: "극한·미분·적분의 직관적 이해와 계산 연습.", tags: ["고등수학", "미적분", "심화"] },
+    { title: "수와 연산", category: "개념 완성", href: "./concept-detail.html?topic=numbers", desc: "유리수·소수 연산의 기초 개념을 기출과 연결해 정리합니다.", tags: ["중학수학", "연산", "유리수"] },
+    { title: "문자와 식", category: "개념 완성", href: "./concept-detail.html?topic=letters-expressions", desc: "문자를 이용한 식의 표현과 일차식 계산의 핵심 개념.", tags: ["중학수학", "일차식"] },
+    { title: "일차방정식", category: "개념 완성", href: "./concept-detail.html?topic=linear-equations", desc: "방정식의 풀이 원리와 활용 문제 접근법.", tags: ["중학수학", "방정식"] },
+    { title: "함수와 그래프", category: "개념 완성", href: "./concept-detail.html?topic=functions-graphs", desc: "함수의 정의, 그래프 해석, 변환을 단계별로 학습.", tags: ["고등수학", "함수"] },
+    { title: "미적분 기초", category: "개념 완성", href: "./concept-detail.html?topic=calculus-basics", desc: "극한·미분·적분의 직관적 이해와 계산 연습.", tags: ["고등수학", "미적분", "심화"] },
 
     // 기출 문제
     { title: "수능 수학 기출", category: "기출 문제", href: "./past-exams.html", desc: "최신 수능 수학 영역 기출문제와 전문항 해설.", tags: ["수능", "고3"] },

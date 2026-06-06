@@ -2,10 +2,13 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <script>document.documentElement.classList.add("js");setTimeout(function(){document.documentElement.classList.add("anim-ready")},2400);</script>
+    <script>document.documentElement.classList.add("js");setTimeout(function(){document.documentElement.classList.add("anim-ready")},600);</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>개념 완성 | MathHub</title>
     <meta name="description" content="기출과 연결된 핵심 수학 개념을 단계별로 정리한 개념 완성 페이지입니다." />
+    <link rel="canonical" href="https://jiwon12011.github.io/mathhub/concepts.html" />
+    <meta property="og:url" content="https://jiwon12011.github.io/mathhub/concepts.html" />
+    <meta property="og:image" content="https://jiwon12011.github.io/mathhub/assets/images/og-cover.png" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="MathHub" />
     <meta property="og:title" content="개념 완성 | MathHub" />
@@ -19,9 +22,10 @@
       crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
     />
-    <link rel="stylesheet" href="./styles.css?v=20260528" />
+    <link rel="stylesheet" href="./styles.css?v=20260606" />
   </head>
   <body>
+    <a class="skip-link" href="#main">본문 바로가기</a>
     <header class="site-header sub-header">
       <a class="logo" href="./index.html" aria-label="MathHub home">Math<span>Hub</span></a>
       <nav class="nav" aria-label="Main navigation">
@@ -46,7 +50,7 @@
       </div>
     </header>
 
-    <main class="concept-page">
+    <main id="main" class="concept-page">
       <section class="concept-hero">
         <h1>개념이 잡히면, 문제는 풀립니다</h1>
         <p>기출과 연결된 핵심 개념을 빠르게 정리해보세요.</p>
@@ -59,10 +63,10 @@
             <div class="side-group open">
               <button type="button">중학교 1학년 <span>⌄</span></button>
               <ul>
-                <li class="active"><a href="./concept-detail.html">수와 연산</a></li>
-                <li><a href="./concept-detail.html">문자와 식</a></li>
-                <li><a href="./concept-detail.html">일차방정식</a></li>
-                <li><a href="./concept-detail.html">좌표와 그래프</a></li>
+                <li class="active"><a href="./concept-detail.html?topic=numbers">수와 연산</a></li>
+                <li><a href="./concept-detail.html?topic=letters-expressions">문자와 식</a></li>
+                <li><a href="./concept-detail.html?topic=linear-equations">일차방정식</a></li>
+                <li><a href="./concept-detail.html?topic=coordinates-graphs">좌표와 그래프</a></li>
               </ul>
             </div>
             <div class="side-group collapsed">
@@ -111,42 +115,42 @@
                 <h3>1. 소수와 합성수</h3>
                 <p>자연수를 약수의 개수에 따라 분류하고 거듭제곱 표현 익히기</p>
               </div>
-              <a href="./concept-detail.html">바로가기 ▶</a>
+              <a href="./concept-detail.html?topic=numbers#lesson-1">바로가기 ▶</a>
             </article>
             <article class="lesson-card">
               <div>
                 <h3>2. 소인수분해</h3>
                 <p>합성수를 소수들의 곱으로 분해하여 수의 구조 파악하기</p>
               </div>
-              <a href="./concept-detail.html">바로가기 ▶</a>
+              <a href="./concept-detail.html?topic=numbers#lesson-2">바로가기 ▶</a>
             </article>
             <article class="lesson-card">
               <div>
                 <h3>3. 최대공약수와 최소공배수</h3>
                 <p>1보다 큰 자연수를 오직 소수들의 곱으로만 나타내는 것</p>
               </div>
-              <a href="./concept-detail.html">바로가기 ▶</a>
+              <a href="./concept-detail.html?topic=numbers#lesson-3">바로가기 ▶</a>
             </article>
             <article class="lesson-card">
               <div>
                 <h3>4. 정수와 유리수</h3>
                 <p>양수, 음수, 0의 개념과 수직선 위에서의 위치 이해하기</p>
               </div>
-              <a href="./concept-detail.html">바로가기 ▶</a>
+              <a href="./concept-detail.html?topic=numbers#lesson-4">바로가기 ▶</a>
             </article>
             <article class="lesson-card">
               <div>
                 <h3>5. 절댓값과 대소관계</h3>
                 <p>원점에서의 거리 개념을 익히고 수의 크기 비교하기</p>
               </div>
-              <a href="./concept-detail.html">바로가기 ▶</a>
+              <a href="./concept-detail.html?topic=numbers#lesson-5">바로가기 ▶</a>
             </article>
             <article class="lesson-card">
               <div>
                 <h3>6. 정수와 유리수의 사칙연산</h3>
                 <p>부호가 있는 수들의 덧셈, 뺄셈, 곱셈, 나눗셈 정복하기</p>
               </div>
-              <a href="./concept-detail.html">바로가기 ▶</a>
+              <a href="./concept-detail.html?topic=numbers#lesson-6">바로가기 ▶</a>
             </article>
           </div>
         </div>
@@ -170,9 +174,9 @@
         </div>
       </div>
     </footer>
-    <script src="./site.js?v=20260528"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
-    <script src="./gsap-init.js"></script>
+    <script src="./site.js?v=20260606" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js" defer></script>
+    <script src="./gsap-init.js" defer></script>
   </body>
 </html>
