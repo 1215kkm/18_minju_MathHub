@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /admin.html
 
-Sitemap: https://jiwon12011.github.io/mathhub/sitemap.xml
+Sitemap: https://1215kkm.github.io/18_minju_MathHub/sitemap.xml
